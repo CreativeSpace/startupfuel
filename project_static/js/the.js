@@ -11,60 +11,22 @@ if (document.cookie && document.cookie != '') {
   }
 }
 
+var moneyRegex = /^\d+(\.\d{0,2})?$/;
 
-var showDonateBox = function(ppid, description, amount) {
-  //get the wrapper box from the dom or create it
-  var wrapper = $('#donate-box');
-  if (!wrapper.length) {
-    wrapper = $('<div id="donate-box">');
-    wrapper.hide();
-    $(document.body).append(wrapper);
-  } else {
-    wrapper.empty();
-  }
-
-  //generate the box
-  var box = $('<div>');
-  wrapper.append(box);
-
-  //change the description based on whether the amount was specified
-  if (!amount) {
-    var desc = $('<p>' +
-      "Enter the amount you'd like to donate" +
-      '</p>');
-  } else {
-    var desc = $('<p>' +
-      "Donate $" + amount + "?" +
-      '</p>');
-  }
-
-  //build the elements
-  var field = $('<input>');
-  var ok = $('<input type="button" value="Donate">');
-  var cancel = $('<input type="button" value="Cancel">');
-
-  box.append(desc);
-  //add them to the box
-  if (!amount) //if no amount was specified, show a box
-    box.append(field);
-  box.append(ok);
-  box.append(cancel);
+$(document).ready(function() {
+  $('#amount').placeholder();
 
   //register event handlers
-  ok.click(function() {
+  $('#submit').click(function() {
 
-    //if an amount was specified use that, otherwise use the field's
-    //amount
-    var amt = amount || field.val()
+    //get the amount from the form
+    var amt = $('#amount').val()
 
-    //validate amount
-    if (!amt) { //TODO - more serious validation
-      alert('You must enter an amount');
+    //validate amount (exists and decimal)
+    if (!amt || !moneyRegex.exec(amt)) {
+      alert('You must enter a valid amount');
       return;
     }
-
-    //don't need that box anymore
-    wrapper.hide();
 
     //tell django we've donated
     var xhr = new XMLHttpRequest();
@@ -75,19 +37,16 @@ var showDonateBox = function(ppid, description, amount) {
              '&ppid=' + escape(ppid));
 
     //make the paypal form and submit it
-    var form = genPaypalForm(ppid, description, amount);
+    var form = genPaypalForm(ppid, 'Donate $' + amt, amount);
     form.hide();
     $(document.body).append(form);
     //form.submit();
 
-  });
-  cancel.click(function() {
-    wrapper.hide();
-  });
+    //kill all other handlers
+    return false;
 
-  //show the box
-  wrapper.show();
-};
+  });
+});
 
 var genPaypalForm = function(ppid, desc, amount) {
   var hidden = {

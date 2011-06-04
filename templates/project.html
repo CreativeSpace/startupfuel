@@ -16,6 +16,7 @@
 
     <div id="donate">
         <form>
+            <input type="hidden" id="ppid" value="{{ startup.paypal_email }}">
             <input type="text" id="amount" placeholder="Donation Amount" />
             <input type="submit" id="submit" />
         </form>
@@ -43,5 +44,4 @@
         {{ tier.incentive }}
     </div>
     {% endfor %}
-    <a href="#" onclick="showDonateBox('{{ startup.paypal_email }}', 'Donate Money');">Donate</a>
 {% endblock %}
