@@ -85,6 +85,15 @@ header{
                 position:absolute;
                 top:0;right:5px;
             }
+        #social{
+            margin-top:15px;
+            padding-left:60px;
+        }
+            #twitter, #facebook{
+                float:left;
+            }
+            #twitter{}
+            #facebook{}
         #sidebar .prize{
             margin-bottom:20px;
         }
