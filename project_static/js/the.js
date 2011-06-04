@@ -35,7 +35,7 @@ var showDonateBox = function(ppid, desc, amount) {
              '&ppid=' + escape(ppid));
 
     //make the paypal form and submit it
-    getPaypalForm(ppid, desc, amount).submit();
+    getPaypalForm(ppid, desc, amount);//.submit();
   };
   cancel.click(function() {
     box.hide();
