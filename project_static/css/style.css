@@ -55,6 +55,29 @@ header{
         width:340px;
         float:right;
     }
+
+        #donate{
+            margin-bottom:15px;
+        }
+            #donate input{
+                height:25px;
+                border-radius: 5px;
+                border:1px solid #999;
+                /*box-shadow:0 1px 3px #777;*/
+            }
+            #amount{
+                width:250px;
+                padding:0px 5px;
+                background:-webkit-gradient(linear, left top, left bottom,
+                    from(#d9d9d9), to(#f8f8f8));
+            }
+            #submit{
+                width:72px;
+                padding:3px 5px;
+                background:-webkit-gradient(linear, left top, left bottom,
+                    from(#81cdf2), to(#75badb));
+            }
+
         #progress{
             position:relative;
             height:25px;
@@ -64,7 +87,7 @@ header{
             border-radius: 5px;
             border:1px solid #999;
             /*box-shadow:0 1px 1px #222;*/
-            box-shadow:0 1px 3px #777;
+            /*box-shadow:0 1px 3px #777;*/
             /*box-shadow:inset 0 0 4px #aaa;*/
             background:-webkit-gradient(linear, left top, left bottom,
                 from(#d9d9d9), to(#f8f8f8));
