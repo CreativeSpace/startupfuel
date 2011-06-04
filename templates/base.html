@@ -5,48 +5,10 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif'
                 rel='stylesheet' type='text/css'>
+        <link href='{{STATIC_URL}}/style.css'
+                rel='stylesheet' type='text/css'>
         <script src="http://ajax.cdnjs.com/ajax/libs/modernizr/1.7/modernizr-1.7.min.js"></script>
-        <style>
-            body, html{
-                margin:0; padding:0;
-                font-size: 16px;
-                font-family: 'Droid Sans', arial, sans-serif;
-            }
-
-            header, #body, footer{
-                width:960px;
-                margin: 10px auto;
-            }
-            header{
-            }
-                header h1 {
-                    font-family:"Droid Serif", serif;
-                    font-size: 60px;
-                }
-
-            #body{
-
-            }
-                #main{
-                    width:630px;
-                    float:left;
-                }
-                #sidebar{
-                    margin-top:50px;
-                    width:320px;
-                    float:right;
-                }
-
-            footer{
-                color:#888;
-                text-align:center;
-                font-size:14px;
-                clear:both;
-            }
-                footer a{
-                    color:#888;
-                }
-        </style>
+        <script src="{{STATIC_URL}}/js/modernizr.js"></script>
     </head>
     <body>
         <header>
