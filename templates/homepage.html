@@ -3,7 +3,7 @@
 {% block content %}
     {% for startup in startups %}
     <a href="{% url project slug=startup.slug %}">
-        <img src="{{STATUC_URL}}{{startup.logo}}" alt="{{ startup }}" />
+        <img src="{{STATIC_URL}}{{startup.logo}}" alt="{{ startup }}" />
     </a>
     {% endfor %}
 {% endblock %}
