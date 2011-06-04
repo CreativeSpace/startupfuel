@@ -9,5 +9,9 @@ urlpatterns = patterns('',
     # url(r'^fundfounders/', include('fundfounders.foo.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
+)
+
+urlpatterns += patterns('fundfounders.startups.views',
+    url(r'^(?P<slug>[\w-]+)/$', 'detail'),
+    url(r'^$', 'index'),
 )
