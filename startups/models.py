@@ -6,6 +6,7 @@ class Startup(models.Model):
     description = models.TextField(blank=True)
     banner = models.ImageField(upload_to='banners', null=True, blank=True)
     website = models.URLField(blank=True)
+    twitter = models.CharField(max_length=50, blank=True)
     video = models.CharField(max_length=50, blank=True)
     paypal_email = models.EmailField(blank=True)
 
