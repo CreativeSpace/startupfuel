@@ -12,6 +12,6 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('fundfounders.startups.views',
-    url(r'^(?P<slug>[\w-]+)/$', 'project'),
-    url(r'^$', 'index'),
+    url(r'^(?P<slug>[\w-]+)/$', 'project', name='project'),
+    url(r'^$', 'homepage', name='homepage'),
 )
