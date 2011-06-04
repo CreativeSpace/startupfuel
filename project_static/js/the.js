@@ -64,15 +64,23 @@ $(document).ready(function() {
     //tell django we've donated
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/ajax/donation');
+    xhr.onreadystatechange = function(readyState) {
+      if (readyState == 4) {
+        if (xhr.status == 200)
+          //make the paypal form and submit it
+          var form = genPaypalForm(ppid, 'Donate $' + amt + ' to ' + startupName, amt);
+          form.hide();
+          $(document.body).append(form);
+          form.submit();
+        } else {
+          alert('Something went wrong with the server :O');
+          $('#amount').val('');
+        }
+      }
+    };
     //no onreadystate, because we don't care about the response :P
     xhr.send('amount=' + amt +
              '&ppid=' + escape(ppid));
-
-    //make the paypal form and submit it
-    var form = genPaypalForm(ppid, 'Donate $' + amt + ' to ' + startupName, amt);
-    form.hide();
-    $(document.body).append(form);
-    form.submit();
 
     //modify the input
     $('#amount').val('Sending you to PayPal...').attr('disabled', 'disabled');
