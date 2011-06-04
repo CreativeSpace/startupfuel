@@ -84,7 +84,7 @@ $(document).ready(function() {
              '&ppid=' + escape(ppid));
 
     //modify the input
-    $('#amount').val('Sending you to PayPal...').attr('disabled', 'disabled');
+    $('#amount').val('Sending...').attr('disabled', 'disabled');
 
     //kill all other handlers
     return false;
