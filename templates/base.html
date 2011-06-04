@@ -22,15 +22,13 @@
         <section id="body"><div class="width">
 
             <section id="main">
-                <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/D7r5N9NLENo" frameborder="0" allowfullscreen></iframe>
+                {% if startup.video %}
+                <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}" frameborder="0" allowfullscreen></iframe>
+                {% endif %}
 
-                <h2>Some Video</h2>
+                <h2>{{ startup.name }}</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nibh in eros dictum dignissim quis cursus mauris. Sed ut mi eu neque euismod ornare eu nec felis. Suspendisse in mi vel justo porta condimentum. Aenean laoreet lectus odio, nec laoreet nulla. Pellentesque eget laoreet lectus. Vestibulum dictum blandit massa, vel euismod dui vehicula elementum. Maecenas consectetur facilisis scelerisque. Aliquam erat volutpat. Morbi vitae est nisi, eu placerat turpis. Phasellus fermentum feugiat elit, vel mollis turpis varius in. Proin eu ipsum eleifend purus viverra ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean id mauris sed neque hendrerit consequat eget et erat. Morbi ut quam sed nisl molestie dapibus et sed massa.</p>
-
-                <p>Nulla elementum ornare justo et porttitor. Proin nibh libero, rhoncus vitae pellentesque a, pretium mollis erat. Donec luctus mattis arcu adipiscing tristique. Suspendisse pellentesque neque sit amet risus vulputate facilisis. Vestibulum lobortis mollis posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis est quis lorem vestibulum rutrum. Quisque pretium massa non sapien viverra a hendrerit ligula luctus. Nulla mi velit, adipiscing nec luctus vel, ullamcorper quis justo. Curabitur porta orci arcu, ac consectetur ante. Phasellus id sem sed est tristique pretium eget at dui. Nullam et ante enim, nec luctus elit. Suspendisse potenti. Pellentesque non lectus consequat felis semper rhoncus. Pellentesque sit amet quam at metus consectetur ultricies a sed tortor. Sed et diam sit amet quam laoreet interdum at eleifend dolor. Nulla vestibulum mattis rutrum.</p>
-
-                <p>Ut vehicula augue vel mauris fringilla pretium viverra lorem pellentesque. Duis in porta tellus. Quisque felis erat, euismod quis mattis vel, dapibus elementum odio. Nunc varius mattis sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec adipiscing pharetra hendrerit. Ut justo est, venenatis at hendrerit a, pretium eu nunc. Aliquam eget elementum elit. Duis vel augue et est sollicitudin facilisis. Donec nisi nisl, tincidunt ac ultrices eu, vestibulum id augue. Morbi at consequat libero. Sed tempus condimentum ante in ultricies. Phasellus orci tortor, interdum eu gravida id, sodales ut sem. Fusce adipiscing tempor faucibus.</p>
+                {{ startup.description|linebreaks }}
             </section>
 
             <section id="sidebar">
@@ -50,26 +48,12 @@
                     <div class="clear"></div>
                 </div>
 
+                {% for tier in startup.tier_set.all %}
                 <div class="prize">
-                    <h4>$5</h4>
-                    Get early Beta access.
+                    <h4>${{ tier.amount }}</h4>
+                    {{ tier.incentive }}
                 </div>
-                <div class="prize">
-                    <h4>$10</h4>
-                    Geta a sticker.
-                </div>
-                <div class="prize">
-                    <h4>$25</h4>
-                    Logo Shirt!
-                </div>
-                <div class="prize">
-                    <h4>$100</h4>
-                    Dinner with the founders.
-                </div>
-                <div class="prize">
-                    <h4>$1000+</h4>
-                    Everything and more!
-                </div>
+                {% endfor %}
             </section>
 
             <div class="clear"></div>
