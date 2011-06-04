@@ -18,6 +18,13 @@ class Startup(models.Model):
     def amount_raised(self):
         return Donation.objects.filter(startup=self).aggregate(amount_raised=Sum('amount'))['amount_raised']
 
+    def amount_raised_percent(self):
+        amount_raised = self.amount_raised()
+        if amount_raised > self.goal:
+            return 100
+        else:
+            return amount_raised / self.goal * 100
+
 class Tier(models.Model):
     startup = models.ForeignKey(Startup)
     amount = models.IntegerField()
