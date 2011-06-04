@@ -92,7 +92,8 @@ var genPaypalForm = function(ppid, desc, amount) {
     cmd: '_donations',
     item_name: desc,
     currency_code: 'CAD',
-    amount: amount
+    amount: amount,
+    'return': window.location.href
   };
 
   var form = $('<form></form>');
