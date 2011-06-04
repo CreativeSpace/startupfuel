@@ -13,31 +13,50 @@ if (document.cookie && document.cookie != '') {
 
 
 var showDonateBox = function(ppid, desc, amount) {
-  var box = $('#donate-form');
+  var box = $('#donate-box');
   if (!box.length) {
-    box = $('<div id="donate-form">');
+    box = $('<div id="donate-box">');
     box.hide();
     $(document.body).append(box);
   } else {
     box.empty();
   }
 
-  var desc = $('<p>' +
-    "Enter the amount you'd like to donate" +
-    '</p>');
+  if (!amount) {
+    var desc = $('<p>' +
+      "Enter the amount you'd like to donate" +
+      '</p>');
+  } else {
+    var desc = $('<p>' +
+      "Donate $" + amount + "?" +
+      '</p>');
+  }
 
   var field = $('<input>');
   var ok = $('<input type="button" value="Donate">');
   var cancel = $('<input type="button" value="Cancel">');
 
   //build the box out
-  box.append(field);
+  if (!amount) //if no amount was specified, show a box
+    box.append(field);
   box.append(desc);
   box.append(ok);
   box.append(cancel);
 
   //register event handlers
   ok.click(function() {
+
+    //if an amount was specified use that, otherwise use the field's
+    //amount
+    var amt = amount || field.val()
+
+    //validate amount
+    if (!amt) { //TODO - more serious validation
+      alert('You must enter an amount');
+      return;
+    }
+
+    //don't need that box anymore
     box.hide();
 
     //tell django we've donated
@@ -45,7 +64,7 @@ var showDonateBox = function(ppid, desc, amount) {
     xhr.open('POST', '/ajax/donation');
     xhr.setRequestHeader('X-CSRFToken', CSRF_TOKEN);
     //no onreadystate, because we don't care about the response :P
-    xhr.send('amount=' + amount +
+    xhr.send('amount=' + amt +
              '&ppid=' + escape(ppid));
 
     //make the paypal form and submit it

@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
+{% load markup %}
+
 {% block main %}
     {% if startup.video %}
     <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}" frameborder="0" allowfullscreen></iframe>
     {% endif %}
-    
+
     <h2>{{ startup.name }}</h2>
-    
-    {{ startup.description|linebreaks }}
+
+    {{ startup.description|markdown }}
 {% endblock %}
 
 {% block sidebar %}
@@ -16,7 +18,7 @@
         <div id="progress_raised">Raised: ${{ startup.amount_raised|floatformat:'-2' }}</div>
         <div id="progress_goal">Goal: ${{ startup.goal }}</div>
     </div>
-    
+
     <div id="social">
         <div id="twitter">
             <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ startup.twitter }} is getting started on Startup Dough. Let's make this happen!" data-count="horizontal" data-via="startupdough">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
@@ -26,11 +28,12 @@
         </div>
         <div class="clear"></div>
     </div>
-    
+
     {% for tier in startup.tier_set.all %}
     <div class="prize">
         <h4>${{ tier.amount }}</h4>
         {{ tier.incentive }}
     </div>
     {% endfor %}
+    <a href="#" onclick="showDonateBox('info@ideasylum.com', 'Donate Money');">Donate</a>
 {% endblock %}
