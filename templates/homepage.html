@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for startup in startups %}
+    <a href="{% url project slug=startup.slug %}">{{ startup }}</a> | 
+    {% endfor %}
+{% endblock %}
