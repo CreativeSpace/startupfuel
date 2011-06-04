@@ -8,7 +8,43 @@ $(document).ready(function() {
   //grab the startup name
   var startupName = $('#startup-name').val();
 
-  //register event handlers
+  //handle payment change
+  var amountChange = function() {
+    //clear the existing active/current highlights
+    $('.prize').removeClass('active')
+               .removeClass('current');
+
+    //grab the amount
+    var amt = $('#amount').val();
+
+    //if we don't have a valid amount, clear all the highlights
+    if (!amt || !moneyRegex.exec(amt)) {
+      return;
+    }
+
+    //strip leading $
+    if (amt[0] == '$') amt = amt.substr(1);
+
+    //walk the amounts
+    var last = null;
+    $('.prize').each(function() {
+      var n = parseFloat($(this).attr('data-amount'));
+
+      //if the amount is higher, abort
+      if (n > amt) {
+        if (last) last.addClass('current');
+        return;
+      }
+
+      $(this).addClass('active');
+
+      last = $(this);
+    });
+  };
+  $('#amount').keyup(amountChange)
+              .change(amountChange);
+
+  //handle payment submission
   $('#submit').click(function() {
 
     //get the amount from the form
