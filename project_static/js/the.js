@@ -1,7 +1,20 @@
+// get the csrf token
+if (document.cookie && document.cookie != '') {
+  var cookies = document.cookie.split(';');
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = jQuery.trim(cookies[i]);
+    // Does this cookie string begin with the name we want?
+    if (cookie.substring(0, 9 + 1) == ('csrftoken' + '=')) {
+      CSRF_TOKEN = decodeURIComponent(cookie.substring(9 + 1));
+      break;
+    }
+  }
+}
+
 
 var showDonateBox = function(ppid, desc, amount) {
   var box = $('#donate-form');
-  if (!box) {
+  if (!box.length) {
     box = $('<div id="donate-form">');
     box.hide();
     $(document.body).append(box);
@@ -14,8 +27,8 @@ var showDonateBox = function(ppid, desc, amount) {
     '</p>');
 
   var field = $('<input>');
-  var ok = $('<input type="button">');
-  var cancel = $('<input type="button">');
+  var ok = $('<input type="button" value="Donate">');
+  var cancel = $('<input type="button" value="Cancel">');
 
   //build the box out
   box.append(field);
@@ -30,16 +43,24 @@ var showDonateBox = function(ppid, desc, amount) {
     //tell django we've donated
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/ajax/donation');
+    xhr.setRequestHeader('X-CSRFToken', CSRF_TOKEN);
     //no onreadystate, because we don't care about the response :P
     xhr.send('amount=' + amount +
              '&ppid=' + escape(ppid));
 
     //make the paypal form and submit it
-    getPaypalForm(ppid, desc, amount);//.submit();
-  };
+    var form = genPaypalForm(ppid, desc, amount);
+    //form.hide();
+    $(document.body).append(form);
+    //form.submit();
+
+  });
   cancel.click(function() {
     box.hide();
-  };
+  });
+
+  //show the box
+  box.show();
 };
 
 var genPaypalForm = function(ppid, desc, amount) {
@@ -63,7 +84,7 @@ var genPaypalForm = function(ppid, desc, amount) {
       'type': 'hidden',
       'name': field,
       'value': hidden[field]
-    });
+    }));
   }
 
   //submit image

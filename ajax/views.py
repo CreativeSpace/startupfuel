@@ -7,9 +7,9 @@ def donation(request):
   res = HttpResponse()
   res['Content-Type'] = 'application/json'
 
-  if request.method == 'POST':
-    response.write('{"err": true}')
-    return respsonse
+  if request.method != 'POST':
+    res.write('{"err": true}')
+    return res
 
   ppid = request.POST['ppid']
   amount = float(request.POST['amount'])
@@ -17,8 +17,8 @@ def donation(request):
   try:
     startup = Startup.objects.get(paypal_email=ppid)
   except:
-    response.write('{"err": true}')
-    return response
+    res.write('{"err": true}')
+    return res
 
   don = Donation()
   don.startup = startup
@@ -26,3 +26,4 @@ def donation(request):
   don.save()
 
   res.write('{"success": true}')
+  return res
