@@ -3,6 +3,20 @@
 {% load markup %}
 
 {% block main %}
+
+    <div id="pimp">
+        <h2>{{ startup.name }}</h2>
+
+        <img src="{{statup.logo}}">
+        <div id="info">
+            <a href="http://twitter.com/{{ startup.twitter }}">@{{ startup.twitter }}</a>
+            <a href="http://{{ startup.website }}">{{ startup.website }}</a>
+        </div>
+        <div id="oneliner">
+            {{startip.oneliner}}
+        </div>
+    </div>
+
     {% if startup.video %}
     <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}?wmode=Opaque" frameborder="0" allowfullscreen></iframe>
     {% endif %}
@@ -17,7 +31,7 @@
         <div class="clear"></div>
     </div>
 
-    <h2>{{ startup.name }}</h2>
+
 
     {{ startup.description|markdown }}
 {% endblock %}
@@ -41,7 +55,7 @@
 
     {% for tier in startup.tier_set.all %}
     <div class="prize">
-        <h4>${{ tier.amount }}</h4>
+        <h4>${{ tier.amount }}{% if forloop.last %} or more{% endif %}</h4>
         {{ tier.incentive }}
     </div>
     {% endfor %}

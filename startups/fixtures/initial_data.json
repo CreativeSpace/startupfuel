@@ -3,14 +3,14 @@
         "pk": 1,
         "model": "startups.startup",
         "fields": {
-            "website": "http://hipsell.com/", 
+            "website": "http://hipsell.com/",
             "description": "Cure the pain of selling items online by streamlining the process as much as possible.\n\n<h3>Problem</h3>\n\nIt’s currently painful and time consuming to sell things: transferring or emailing photos to a computer, inbox overload and using email for correspondence, receiving emails from non-serious buyers, low ball offers, answering the same question several times (e.g., “Is it still available?”), remembering to remove your post once sold, managing multiple ads, and more. The user experience is a decade old.\n\n<h3>Solution</h3>\n\nA web and mobile application to make selling online painless. Whip out your phone, take a snapshot and write a brief description. It’s as easy as posting a pic to Twitter and will take less than 60 seconds.\n\nHipsell will cross-post your item to Craigslist and Kijiji, and create a page that manages all activity around the sale. We will manage all offers and questions in the open, while keeping your email private and your inbox from flooding. We believe this solves a huge pain for sellers.",
-            "paypal_email": "info@ideasylum.com", 
-            "twitter": "hipsell", 
-            "goal": 5000, 
+            "paypal_email": "info@ideasylum.com",
+            "twitter": "hipsell",
+            "goal": 5000,
             "video": "C3Yxp5hPB40",
-            "banner": "", 
-            "slug": "hipsell", 
+            "banner": "",
+            "slug": "hipsell",
             "name": "Hipsell"
         }
     },
@@ -18,18 +18,18 @@
         "pk": 1,
         "model": "startups.tier",
         "fields": {
-            "amount": 5, 
-            "startup": 1, 
-            "incentive": "Get early Beta access."
+            "amount": 5,
+            "startup": 1,
+            "incentive": "Get early beta access."
         }
     },
     {
         "pk": 2,
         "model": "startups.tier",
         "fields": {
-            "amount": 10, 
-            "startup": 1, 
-            "incentive": "Get a sticker."
+            "amount": 10,
+            "startup": 1,
+            "incentive": "Get early beta access and a sticker."
         }
     },
     {
@@ -37,7 +37,7 @@
         "model": "startups.tier",
         "fields": {
             "startup": 1,
-            "incentive": "Logo shirt!",
+            "incentive": "Get early beta access, a sticker and a Hipsell logo tee.",
             "amount": 25
         }
     },
@@ -45,41 +45,50 @@
         "pk": 4,
         "model": "startups.tier",
         "fields": {
-            "amount": 100, 
-            "startup": 1, 
-            "incentive": "Dinner with the founders."
+            "amount": 50,
+            "startup": 1,
+            "incentive": "Get early beta access, a sticker, Hipsell logo tee and work out off Hipsell office for a day."
         }
     },
     {
         "pk": 5,
         "model": "startups.tier",
         "fields": {
-            "amount": 1000, 
-            "startup": 1, 
-            "incentive": "Everything and more!"
+            "amount": 100,
+            "startup": 1,
+            "incentive": "Get early beta access, a sticker, Hipsell logo tee, work out off Hipsell office for a day and a Hipsell logo baseball cap."
         }
-    }, 
+    },
     {
-        "pk": 1, 
-        "model": "startups.donation", 
+        "pk": 5,
+        "model": "startups.tier",
         "fields": {
-            "amount": 5.0, 
+            "amount": 500,
+            "startup": 1,
+            "incentive": "All of the above, lunch with the Founders and a round of drinks at our launch party."
+        }
+    },
+    {
+        "pk": 1,
+        "model": "startups.donation",
+        "fields": {
+            "amount": 5.0,
             "startup": 1
         }
-    }, 
+    },
     {
-        "pk": 2, 
-        "model": "startups.donation", 
+        "pk": 2,
+        "model": "startups.donation",
         "fields": {
-            "amount": 100.0, 
+            "amount": 100.0,
             "startup": 1
         }
-    }, 
+    },
     {
-        "pk": 3, 
-        "model": "startups.donation", 
+        "pk": 3,
+        "model": "startups.donation",
         "fields": {
-            "amount": 75.5, 
+            "amount": 75.5,
             "startup": 1
         }
     }
