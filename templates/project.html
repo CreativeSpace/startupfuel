@@ -12,9 +12,9 @@
 
 {% block sidebar %}
     <div id="progress">
-        <div id="progress_made"></div>
-        <div id="progress_raised">Raised: $40</div>
-        <div id="progress_goal">Goal: $100</div>
+        <div id="progress_made" style="width: {{ startup.amount_raised }}"></div>
+        <div id="progress_raised">Raised: ${{ startup.amount_raised|floatformat:'-2' }}</div>
+        <div id="progress_goal">Goal: ${{ startup.goal }}</div>
     </div>
     
     <div id="social">
