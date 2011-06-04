@@ -7,6 +7,16 @@
     <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}?wmode=Opaque" frameborder="0" allowfullscreen></iframe>
     {% endif %}
 
+    <div id="social">
+        <div id="twitter">
+            <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ startup.twitter }} is getting started on Startup Dough. Let's make this happen!" data-count="horizontal" data-via="startupdough">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        </div>
+        <div id="facebook">
+            <iframe src="http://www.facebook.com/plugins/like.php?app_id=171186796274800&amp;href&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+        </div>
+        <div class="clear"></div>
+    </div>
+
     <h2>{{ startup.name }}</h2>
 
     {{ startup.description|markdown }}
@@ -26,16 +36,6 @@
         <div id="progress_made" style="width: {{ startup.amount_raised }}"></div>
         <div id="progress_raised">Raised: ${{ startup.amount_raised|floatformat:'-2' }}</div>
         <div id="progress_goal">Goal: ${{ startup.goal }}</div>
-    </div>
-
-    <div id="social">
-        <div id="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ startup.twitter }} is getting started on Startup Dough. Let's make this happen!" data-count="horizontal" data-via="startupdough">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-        </div>
-        <div id="facebook">
-            <iframe src="http://www.facebook.com/plugins/like.php?app_id=171186796274800&amp;href&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
-        </div>
-        <div class="clear"></div>
     </div>
 
     {% for tier in startup.tier_set.all %}
