@@ -86,6 +86,7 @@ header{
             #facebook{}
         #main p{
             line-height:1.4;
+            margin-bottom:10px;
         }
     #sidebar{
         position:relative;
