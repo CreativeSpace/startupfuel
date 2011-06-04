@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'fundfounders.ajax',
+    'fundfounders.startups',
 )
 
 # A sample logging configuration. The only tangible logging
