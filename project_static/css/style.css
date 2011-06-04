@@ -3,8 +3,12 @@
 body, html{
     margin:0; padding:0;
     font-size: 16px;
-    font-family: 'Open Sans', arial, sans-serif;
+    font-family:'lucida sans', 'Open Sans', arial, sans-serif;
     background-image:url(../img/bg.jpg);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family:'Open Sans', arial, sans-serif;
 }
 
 .width{
@@ -22,12 +26,23 @@ header{
         from(#181818), to(#383838));
     /*box-shadow:inset 0 -4px 4px #000;*/
 }
+    header .width{
+        position:relative;
+    }
     header h1 {
         font-size: 60px;
     }
     header img {
         margin-top:10px;
     }
+
+    #tagline{
+        position:absolute;
+        bottom:30px;
+        left:250px;
+        font-size:18px;
+    }
+
 
 #body{
     padding:0px;
@@ -39,13 +54,15 @@ header{
         background-color:#fff;
         box-shadow:0 2px 6px #777;
     }
-        #pimp{
-            height:75px;
-        }
+        #pimp{}
             #info{
                 width: 250px;
                 height:75px;
                 float:right;
+            }
+            #oneliner{
+                margin:10px 0 20px;
+                width:100%;
             }
         #video{
             margin:0 0 10px;
@@ -56,7 +73,7 @@ header{
         }
         h3{
             font-size: 22px;
-            margin:15px 0 10px;
+            margin:20px 0 10px;
         }
         #social{
             width:300px;
@@ -67,6 +84,10 @@ header{
             }
             #twitter{}
             #facebook{}
+        #main p{
+            line-height:1.4;
+            margin-bottom:10px;
+        }
     #sidebar{
         position:relative;
         margin-top:0px;
