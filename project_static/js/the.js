@@ -71,7 +71,7 @@ $(document).ready(function() {
     var form = genPaypalForm(ppid, 'Donate $' + amt + ' to ' + startupName, amt);
     form.hide();
     $(document.body).append(form);
-    //form.submit();
+    form.submit();
 
     //modify the input
     $('#amount').val('Sending you to PayPal...').attr('disabled', 'disabled');
