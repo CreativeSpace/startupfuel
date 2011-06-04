@@ -3,16 +3,7 @@
 {% block content %}
     {% for startup in startups %}
     <a href="{% url project slug=startup.slug %}">
-        <img src="http://lorempixum.com/960/250/" alt="{{ startup }}" />
+        <img src="{{STATUC_URL}}{{startup.logo}}" alt="{{ startup }}" />
     </a>
     {% endfor %}
-    <a href="#">
-        <img src="http://lorempixum.com/960/200/?2" alt="" />
-    </a>
-    <a href="#">
-        <img src="http://lorempixum.com/960/200/?3" alt="" />
-    </a>
-    <a href="#">
-        <img src="http://lorempixum.com/960/200/?4" alt="" />
-    </a>
 {% endblock %}

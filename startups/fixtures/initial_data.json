@@ -69,45 +69,5 @@
             "startup": 1,
             "incentive": "All of the above, lunch with the Founders and a round of drinks at our launch party."
         }
-    },
-    {
-        "pk": 1,
-        "model": "startups.donation",
-        "fields": {
-            "amount": 5.0,
-            "startup": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "startups.donation",
-        "fields": {
-            "amount": 100.0,
-            "startup": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "startups.donation",
-        "fields": {
-            "amount": 75.5,
-            "startup": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "startups.donation",
-        "fields": {
-            "amount": 600,
-            "startup": 1
-        }
-    },
-    {
-        "pk": 5,
-        "model": "startups.donation",
-        "fields": {
-            "amount": 1000,
-            "startup": 1
-        }
     }
 ]
