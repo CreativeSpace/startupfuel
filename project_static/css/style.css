@@ -41,7 +41,8 @@ header{
     }
         #main p {
             line-height: 1.4;
-            font-family: Georgia;
+            font-family: Tahoma, Geneva;
+            padding-right: 20px;
         }
         #video{
             margin:0 0 10px;
@@ -51,6 +52,7 @@ header{
             margin-bottom:20px;
         }
         h3{
+            font-size: 22px;
             margin:15px 0 10px;
         }
         #social{
