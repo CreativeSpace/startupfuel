@@ -55,6 +55,7 @@ header{
             margin-bottom:20px;
         }
         h3{
+            font-size: 22px;
             margin:15px 0 10px;
         }
         #social{
@@ -150,6 +151,11 @@ header{
         }
         #sidebar .prize.active {
             color: yellow;
+            -webkit-transition: color 0.2s ease-in;
+            -moz-transition: color 0.2s ease-in;
+            -ms-transition: color 0.2s ease-in;
+            -o-transition: color 0.2s ease-in;
+            transition: color 0.2s ease-in;
         }
         #sidebar .prize.active.current {
             color: green;
