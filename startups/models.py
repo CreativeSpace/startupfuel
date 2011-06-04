@@ -14,15 +14,15 @@ class Startup(models.Model):
 
 class Tier(models.Model):
     startup = models.ForeignKey(Startup)
-    value = models.IntegerField()
+    amount = models.IntegerField()
     incentive = models.CharField(max_length=150)
 
     def __unicode__(self):
-        return self.value
+        return str(self.value)
 
 class Donation(models.Model):
     startup = models.ForeignKey(Startup)
     amount = models.FloatField()
 
     def __unicode__(self):
-        return self.amount
+        return str(self.value)
