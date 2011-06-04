@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-from fundfounders.startups.models import Payment
+from fundfounders.startups.models import Donation, Startup
 
 def donation(request):
   #prep basic response stuff
@@ -14,9 +14,15 @@ def donation(request):
   ppid = request.POST['ppid']
   amount = float(request.POST['amount'])
 
-  payment = Payment()
-  payment.ppid = ppid
-  payment.amount = amount
-  payment.save()
+  try:
+    startup = Startup.objects.get(paypal_email=ppid)
+  except:
+    response.write('{"err": true}')
+    return response
+
+  don = Donation()
+  don.startup = startup
+  don.amount = amount
+  don.save()
 
   res.write('{"success": true}')
