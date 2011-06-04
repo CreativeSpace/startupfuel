@@ -94,7 +94,7 @@ header{
             }
         #social{
             margin-top:15px;
-            padding-left:60px;
+            /*padding-left:60px;*/
         }
             #twitter, #facebook{
                 float:left;
@@ -139,10 +139,13 @@ footer{
         color-stop(100%, rgba(0, 0, 0, 0.7)));
 }
 
-#donate-box > *:first-child {
-    margin-top: 200px;
+#donate-box > :first-child {
+    position:absolute;
+    height:60px;
+    width:500px;
+    top:50%;left:50%;
+    margin: -30px 0 0 -250px;
 }
-
-#donate-box > * {
-    margin-left: 200px;
+#donate-box input{
+    margin:10px;
 }
