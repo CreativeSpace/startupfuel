@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('fundfounders.startups.views',
-    url(r'^(?P<slug>[\w-]+)/$', 'detail'),
+    url(r'^(?P<slug>[\w-]+)/$', 'project'),
     url(r'^$', 'index'),
     (r'^ajax/', include('fundfounders.ajax.urls')),
 )

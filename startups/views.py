@@ -8,8 +8,8 @@ def index(request):
         'startup': startup,
         })
 
-def detail(request, slug):
+def project(request, slug):
     startup = Startup.objects.get(slug=slug)
-    return render(request, 'detail.html', {
+    return render(request, 'project.html', {
         'startup': startup,
         })
