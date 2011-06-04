@@ -13,15 +13,21 @@ if (document.cookie && document.cookie != '') {
 
 
 var showDonateBox = function(ppid, description, amount) {
-  var box = $('#donate-box');
-  if (!box.length) {
-    box = $('<div id="donate-box">');
-    box.hide();
-    $(document.body).append(box);
+  //get the wrapper box from the dom or create it
+  var wrapper = $('#donate-box');
+  if (!wrapper.length) {
+    wrapper = $('<div id="donate-box">');
+    wrapper.hide();
+    $(document.body).append(wrapper);
   } else {
-    box.empty();
+    wrapper.empty();
   }
 
+  //generate the box
+  var box = $('<div>');
+  wrapper.append(box);
+
+  //change the description based on whether the amount was specified
   if (!amount) {
     var desc = $('<p>' +
       "Enter the amount you'd like to donate" +
@@ -32,11 +38,12 @@ var showDonateBox = function(ppid, description, amount) {
       '</p>');
   }
 
+  //build the elements
   var field = $('<input>');
   var ok = $('<input type="button" value="Donate">');
   var cancel = $('<input type="button" value="Cancel">');
 
-  //build the box out
+  //add them to the box
   if (!amount) //if no amount was specified, show a box
     box.append(field);
   box.append(desc);
@@ -79,7 +86,7 @@ var showDonateBox = function(ppid, description, amount) {
   });
 
   //show the box
-  box.show();
+  wrapper.show();
 };
 
 var genPaypalForm = function(ppid, desc, amount) {
