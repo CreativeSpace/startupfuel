@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-from fundfounders.apps.startup.models import Payment
+from fundfounders.startups.models import Payment
 
 def donation(request):
   #prep basic response stuff
