@@ -4,12 +4,14 @@
         "model": "startups.startup",
         "fields": {
             "website": "http://hipsell.com/",
-            "description": "Cure the pain of selling items online by streamlining the process as much as possible.\n\n<h3>Problem</h3>\n\nIt’s currently painful and time consuming to sell things: transferring or emailing photos to a computer, inbox overload and using email for correspondence, receiving emails from non-serious buyers, low ball offers, answering the same question several times (e.g., “Is it still available?”), remembering to remove your post once sold, managing multiple ads, and more. The user experience is a decade old.\n\n<h3>Solution</h3>\n\nA web and mobile application to make selling online painless. Whip out your phone, take a snapshot and write a brief description. It’s as easy as posting a pic to Twitter and will take less than 60 seconds.\n\nHipsell will cross-post your item to Craigslist and Kijiji, and create a page that manages all activity around the sale. We will manage all offers and questions in the open, while keeping your email private and your inbox from flooding. We believe this solves a huge pain for sellers.",
+            "short_description": "Cure the pain of selling items online by streamlining the process as much as possible.",
+            "description": "<h3>Problem</h3>\n\nIt’s currently painful and time consuming to sell things: transferring or emailing photos to a computer, inbox overload and using email for correspondence, receiving emails from non-serious buyers, low ball offers, answering the same question several times (e.g., “Is it still available?”), remembering to remove your post once sold, managing multiple ads, and more. The user experience is a decade old.\n\n<h3>Solution</h3>\n\nA web and mobile application to make selling online painless. Whip out your phone, take a snapshot and write a brief description. It’s as easy as posting a pic to Twitter and will take less than 60 seconds.\n\nHipsell will cross-post your item to Craigslist and Kijiji, and create a page that manages all activity around the sale. We will manage all offers and questions in the open, while keeping your email private and your inbox from flooding. We believe this solves a huge pain for sellers.",
             "paypal_email": "info@ideasylum.com",
             "twitter": "hipsell",
             "goal": 5000,
             "video": "C3Yxp5hPB40",
             "banner": "",
+            "logo": "",
             "slug": "hipsell",
             "name": "Hipsell"
         }
@@ -89,6 +91,22 @@
         "model": "startups.donation",
         "fields": {
             "amount": 75.5,
+            "startup": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "startups.donation",
+        "fields": {
+            "amount": 600,
+            "startup": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "startups.donation",
+        "fields": {
+            "amount": 1000,
             "startup": 1
         }
     }
