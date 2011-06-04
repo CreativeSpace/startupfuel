@@ -45,7 +45,7 @@ $(document).ready(function() {
               .change(amountChange);
 
   //handle payment submission
-  $('#submit').click(function() {
+  $('#submit').click(function(event) {
 
     //get the amount from the form
     var amt = $('#amount').val()
@@ -53,7 +53,8 @@ $(document).ready(function() {
     //validate amount (exists and decimal)
     if (!amt || !moneyRegex.exec(amt)) {
       alert('You must enter a valid amount');
-      return;
+      event.preventDefault();
+      return false;
     }
 
     //strip leading $ is needed
