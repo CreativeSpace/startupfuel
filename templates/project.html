@@ -35,5 +35,5 @@
         {{ tier.incentive }}
     </div>
     {% endfor %}
-    <a href="#" onclick="showDonateBox('info@ideasylum.com', 'Donate Money');">Donate</a>
+    <a href="#" onclick="showDonateBox('{{ startup.paypal_email }}', 'Donate Money');">Donate</a>
 {% endblock %}
