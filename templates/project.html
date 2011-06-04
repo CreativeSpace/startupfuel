@@ -5,11 +5,9 @@
 {% block main %}
 
     <div id="pimp">
-        <h2>{{ startup.name }}</h2>
-
-        <img src="{{statup.logo}}">
+        <img src="{{STATIC_URL}}{{startup.logo}}">
         <div id="info">
-            <a href="http://twitter.com/{{ startup.twitter }}">@{{ startup.twitter }}</a>
+            <a href="http://twitter.com/{{ startup.twitter }}">@{{ startup.twitter }}</a><br>
             <a href="http://{{ startup.website }}">{{ startup.website }}</a>
         </div>
         <div id="oneliner">
@@ -42,8 +40,8 @@
         <form>
             <input type="hidden" id="startup-name" value="{{ startup.name }}">
             <input type="hidden" id="ppid" value="{{ startup.paypal_email }}">
-            <input type="text" id="amount" placeholder="Donation Amount" />
-            <input type="submit" id="submit" />
+            <input type="text" id="amount" placeholder="$" />
+            <input type="submit" id="submit" value="Fill 'er Up" />
         </form>
     </div>
 

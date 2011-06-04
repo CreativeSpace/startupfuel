@@ -39,6 +39,14 @@ header{
         background-color:#fff;
         box-shadow:0 2px 6px #777;
     }
+        #pimp{
+            height:75px;
+        }
+            #info{
+                width: 250px;
+                height:75px;
+                float:right;
+            }
         #video{
             margin:0 0 10px;
         }
@@ -60,43 +68,56 @@ header{
             #facebook{}
     #sidebar{
         position:relative;
-        margin-top:3px;
-        width:340px;
+        margin-top:0px;
+        padding:10px;
+        width:320px;
         float:right;
+        text-shadow: 0pt -1pt 2px #fff;
+        /*background-color:#fff;
+        box-shadow:0 2px 6px #777;*/
+        /*color:#fff;*/
+        /*border-right:1px solid #999;
+        border-top:1px solid #999;
+        border-bottom:1px solid #999;*/
+        /*box-shadow:0 2px 6px #777;*/
     }
 
         #donate{
             margin-bottom:15px;
         }
             #donate input{
-                height:25px;
+                height:50px;
                 border-radius: 5px;
                 border:1px solid #999;
+                text-shadow: none;
+                /*color:#eee;*/
             }
             #amount[disabled]{
                 color:#888;
             }
             #amount{
-                width:250px;
+                width:80px;
                 padding:0px 5px;
                 background:-webkit-gradient(linear, left top, left bottom,
                     from(#d9d9d9), to(#f8f8f8));
             }
             #submit{
-                width:72px;
+                width:222px;
                 padding:3px 5px;
                 background:-webkit-gradient(linear, left top, left bottom,
-                    from(#81cdf2), to(#75badb));
+                    from(#9be04c), to(#87c442));
+                    /*from(#81cdf2), to(#75badb));*/
             }
 
         #progress{
             margin-bottom:20px;
             position:relative;
-            height:25px;
+            height:50px;
             width:100%;
             background-color:#fff;
             border-radius: 5px;
             border:1px solid #999;
+            text-shadow: none;
             background:-webkit-gradient(linear, left top, left bottom,
                 from(#d9d9d9), to(#f8f8f8));
         }
@@ -112,7 +133,7 @@ header{
             }
             #progress_raised, #progress_goal{
                 font-size:15px;
-                margin-top:0px;
+                margin-top:13px;
                 padding:3px;
             }
             #progress_raised{
