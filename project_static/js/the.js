@@ -11,10 +11,15 @@ if (document.cookie && document.cookie != '') {
   }
 }
 
-var moneyRegex = /^\d+(\.\d{0,2})?$/;
+var moneyRegex = /^\$?\d+(\.\d{0,2})?$/;
 
 $(document).ready(function() {
   $('#amount').placeholder();
+
+  //grab the ppi
+  var ppid = $('#ppid').val();
+  //grab the startup name
+  var startupName = $('#startup-name').val();
 
   //register event handlers
   $('#submit').click(function() {
@@ -28,6 +33,10 @@ $(document).ready(function() {
       return;
     }
 
+    //strip leading $ is needed
+    if (amt[0] == '$')
+      amt = amt.substr(1);
+
     //tell django we've donated
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/ajax/donation');
@@ -37,10 +46,13 @@ $(document).ready(function() {
              '&ppid=' + escape(ppid));
 
     //make the paypal form and submit it
-    var form = genPaypalForm(ppid, 'Donate $' + amt, amount);
+    var form = genPaypalForm(ppid, 'Donate $' + amt + ' to ' + startupName, amt);
     form.hide();
     $(document.body).append(form);
     //form.submit();
+
+    //modify the input
+    $('#amount').val('Sending you to PayPal...').attr('disabled', 'disabled');
 
     //kill all other handlers
     return false;
