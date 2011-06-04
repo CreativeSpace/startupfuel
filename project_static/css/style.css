@@ -39,6 +39,10 @@ header{
         background-color:#fff;
         box-shadow:0 2px 6px #777;
     }
+        #main p {
+            line-height: 1.4;
+            font-family: Georgia;
+        }
         #video{
             margin:0 0 10px;
         }
