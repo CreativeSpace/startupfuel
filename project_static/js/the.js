@@ -12,7 +12,7 @@ if (document.cookie && document.cookie != '') {
 }
 
 
-var showDonateBox = function(ppid, desc, amount) {
+var showDonateBox = function(ppid, description, amount) {
   var box = $('#donate-box');
   if (!box.length) {
     box = $('<div id="donate-box">');
@@ -68,7 +68,7 @@ var showDonateBox = function(ppid, desc, amount) {
              '&ppid=' + escape(ppid));
 
     //make the paypal form and submit it
-    var form = genPaypalForm(ppid, desc, amount);
+    var form = genPaypalForm(ppid, description, amount);
     form.hide();
     $(document.body).append(form);
     //form.submit();
