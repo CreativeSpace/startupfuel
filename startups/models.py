@@ -25,5 +25,5 @@ class Donation(models.Model):
     startup = models.ForeignKey(Startup)
     amount = models.FloatField()
 
-    def __unicode__(self):
-        return str(self.value)
+    def __str__(self):
+        return str(self.amount)
