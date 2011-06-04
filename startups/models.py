@@ -8,7 +8,6 @@ class Startup(models.Model):
     website = models.URLField(blank=True)
     video = models.CharField(max_length=50, blank=True)
     paypal_email = models.EmailField(blank=True)
-    amount_paid = models.FloatField(default=0)
 
     def __unicode__(self):
         return self.name
@@ -20,3 +19,10 @@ class Tier(models.Model):
 
     def __unicode__(self):
         return self.value
+
+class Donation(models.Model):
+    startup = models.ForeignKey(Startup)
+    amount = models.FloatField()
+
+    def __unicode__(self):
+        return self.amount
