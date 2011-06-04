@@ -13,6 +13,14 @@
 {% endblock %}
 
 {% block sidebar %}
+
+    <div id="donate">
+        <form>
+            <input type="text" id="amount" />
+            <input type="submit" id="submit" />
+        </form>
+    </div>
+
     <div id="progress">
         <div id="progress_made" style="width: {{ startup.amount_raised }}"></div>
         <div id="progress_raised">Raised: ${{ startup.amount_raised|floatformat:'-2' }}</div>

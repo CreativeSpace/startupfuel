@@ -43,10 +43,10 @@ var showDonateBox = function(ppid, description, amount) {
   var ok = $('<input type="button" value="Donate">');
   var cancel = $('<input type="button" value="Cancel">');
 
+  box.append(desc);
   //add them to the box
   if (!amount) //if no amount was specified, show a box
     box.append(field);
-  box.append(desc);
   box.append(ok);
   box.append(cancel);
 
@@ -64,7 +64,7 @@ var showDonateBox = function(ppid, description, amount) {
     }
 
     //don't need that box anymore
-    box.hide();
+    wrapper.hide();
 
     //tell django we've donated
     var xhr = new XMLHttpRequest();
@@ -82,7 +82,7 @@ var showDonateBox = function(ppid, description, amount) {
 
   });
   cancel.click(function() {
-    box.hide();
+    wrapper.hide();
   });
 
   //show the box
