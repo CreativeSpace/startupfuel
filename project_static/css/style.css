@@ -49,6 +49,15 @@ header{
         h3{
             margin:15px 0 10px;
         }
+        #social{
+            width:300px;
+            float:right;
+        }
+            #twitter, #facebook{
+                float:right;
+            }
+            #twitter{}
+            #facebook{}
     #sidebar{
         position:relative;
         margin-top:3px;
@@ -63,7 +72,9 @@ header{
                 height:25px;
                 border-radius: 5px;
                 border:1px solid #999;
-                /*box-shadow:0 1px 3px #777;*/
+            }
+            #amount[disabled]{
+                color:#888;
             }
             #amount{
                 width:250px;
@@ -79,16 +90,13 @@ header{
             }
 
         #progress{
+            margin-bottom:20px;
             position:relative;
             height:25px;
             width:100%;
-            /*border:1px solid #888;*/
             background-color:#fff;
             border-radius: 5px;
             border:1px solid #999;
-            /*box-shadow:0 1px 1px #222;*/
-            /*box-shadow:0 1px 3px #777;*/
-            /*box-shadow:inset 0 0 4px #aaa;*/
             background:-webkit-gradient(linear, left top, left bottom,
                 from(#d9d9d9), to(#f8f8f8));
         }
@@ -115,15 +123,7 @@ header{
                 position:absolute;
                 top:0;right:5px;
             }
-        #social{
-            margin-top:15px;
-            /*padding-left:60px;*/
-        }
-            #twitter, #facebook{
-                float:left;
-            }
-            #twitter{}
-            #facebook{}
+
         #sidebar .prize{
             margin-bottom:20px;
         }
