@@ -50,7 +50,7 @@ var showDonateBox = function(ppid, desc, amount) {
 
     //make the paypal form and submit it
     var form = genPaypalForm(ppid, desc, amount);
-    //form.hide();
+    form.hide();
     $(document.body).append(form);
     //form.submit();
 
