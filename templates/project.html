@@ -4,7 +4,7 @@
 
 {% block main %}
     {% if startup.video %}
-    <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}" frameborder="0" allowfullscreen></iframe>
+    <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}?wmode=Opaque" frameborder="0" allowfullscreen></iframe>
     {% endif %}
 
     <h2>{{ startup.name }}</h2>
