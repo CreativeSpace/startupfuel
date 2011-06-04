@@ -40,7 +40,7 @@
     </div>
 
     {% for tier in startup.tier_set.all %}
-    <div class="prize">
+    <div class="prize" data-amount="{{ tier.amount }}">
         <h4>${{ tier.amount }}</h4>
         {{ tier.incentive }}
     </div>
