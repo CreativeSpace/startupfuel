@@ -39,13 +39,15 @@ header{
         background-color:#fff;
         box-shadow:0 2px 6px #777;
     }
-        #pimp{
-            height:75px;
-        }
+        #pimp{}
             #info{
                 width: 250px;
                 height:75px;
                 float:right;
+            }
+            #oneliner{
+                margin:10px 0 20px;
+                width:100%;
             }
         #video{
             margin:0 0 10px;
@@ -56,7 +58,7 @@ header{
         }
         h3{
             font-size: 22px;
-            margin:15px 0 10px;
+            margin:20px 0 10px;
         }
         #social{
             width:300px;
@@ -67,6 +69,10 @@ header{
             }
             #twitter{}
             #facebook{}
+        #main p{
+            line-height:1.4;
+            font-family:'lucida sans', 'Open Sans', sans;
+        }
     #sidebar{
         position:relative;
         margin-top:0px;

@@ -6,12 +6,12 @@
 
     <div id="pimp">
         <img src="{{STATIC_URL}}{{startup.logo}}">
-        <div id="info">
-            <a href="http://twitter.com/{{ startup.twitter }}">@{{ startup.twitter }}</a><br>
-            <a href="http://{{ startup.website }}">{{ startup.website }}</a>
-        </div>
+        <!-- <div id="info">
+
+        </div> -->
         <div id="oneliner">
-            {{startip.oneliner}}
+            {{startup.short_description}} <a href="http://twitter.com/{{ startup.twitter }}">@{{ startup.twitter }}</a>
+            <a href="http://{{ startup.website }}">{{ startup.website }}</a>
         </div>
     </div>
 
