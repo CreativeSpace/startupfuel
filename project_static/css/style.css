@@ -3,7 +3,7 @@
 body, html{
     margin:0; padding:0;
     font-size: 16px;
-    font-family: 'Droid Sans', arial, sans-serif;
+    font-family: 'Open Sans', arial, sans-serif;
     background-image:url(../img/bg.jpg);
 }
 
@@ -30,20 +30,67 @@ header{
     padding:0px;
 }
     #main{
-        width:600px;
+        width:580px;
         padding:10px;
         float:left;
         background-color:#fff;
         box-shadow:0 2px 6px #777;
     }
         #video{
-            margin:10px 0;
+            margin:0 0 10px;
+        }
+        h2{
+            font-size:20px;
+            margin-bottom:20px;
         }
     #sidebar{
-        margin-top:50px;
-        width:320px;
+        position:relative;
+        margin-top:3px;
+        width:340px;
         float:right;
     }
+        #progress{
+            position:relative;
+            height:25px;
+            width:100%;
+            /*border:1px solid #888;*/
+            background-color:#fff;
+            border-radius: 5px;
+            border:1px solid #999;
+            box-shadow:0 1px 1px #222;
+            /*box-shadow:inset 0 0 4px #aaa;*/
+            background:-webkit-gradient(linear, left top, left bottom,
+                from(#d9d9d9), to(#f8f8f8));
+        }
+            #progress_made{
+                position:absolute;
+                top:0;left:0;
+                height:100%;width:40%;
+                background-color:#393;
+                border-right:1px solid #999;
+                border-radius: 5px 0 0 5px;
+                background:-webkit-gradient(linear, left top, left bottom,
+                    from(#81cdf2), to(#75badb));
+            }
+            #progress_raised, #progress_goal{
+                font-size:15px;
+                margin-top:0px;
+                padding:3px;
+            }
+            #progress_raised{
+                position:absolute;
+                top:0;left:5px;
+            }
+            #progress_goal{
+                position:absolute;
+                top:0;right:5px;
+            }
+        #sidebar .prize{
+            margin-bottom:20px;
+        }
+            #sidebar .prize h4{
+                font-size:42px;
+            }
 
 footer{
     margin:20px 0;
