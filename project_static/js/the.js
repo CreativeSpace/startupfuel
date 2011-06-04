@@ -66,7 +66,7 @@ $(document).ready(function() {
     xhr.open('POST', '/ajax/donation');
     xhr.onreadystatechange = function(readyState) {
       if (readyState == 4) {
-        if (xhr.status == 200)
+        if (xhr.status == 200){
           //make the paypal form and submit it
           var form = genPaypalForm(ppid, 'Donate $' + amt + ' to ' + startupName, amt);
           form.hide();
@@ -77,7 +77,7 @@ $(document).ready(function() {
           $('#amount').val('');
         }
       }
-    };
+    }
     //no onreadystate, because we don't care about the response :P
     xhr.send('amount=' + amt +
              '&ppid=' + escape(ppid));
