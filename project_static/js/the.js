@@ -1,16 +1,3 @@
-// get the csrf token
-if (document.cookie && document.cookie != '') {
-  var cookies = document.cookie.split(';');
-  for (var i = 0; i < cookies.length; i++) {
-    var cookie = jQuery.trim(cookies[i]);
-    // Does this cookie string begin with the name we want?
-    if (cookie.substring(0, 9 + 1) == ('csrftoken' + '=')) {
-      CSRF_TOKEN = decodeURIComponent(cookie.substring(9 + 1));
-      break;
-    }
-  }
-}
-
 var moneyRegex = /^\$?\d+(\.\d{0,2})?$/;
 
 $(document).ready(function() {
@@ -40,7 +27,6 @@ $(document).ready(function() {
     //tell django we've donated
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/ajax/donation');
-    xhr.setRequestHeader('X-CSRFToken', CSRF_TOKEN);
     //no onreadystate, because we don't care about the response :P
     xhr.send('amount=' + amt +
              '&ppid=' + escape(ppid));
