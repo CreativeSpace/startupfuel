@@ -35,6 +35,24 @@ header{
     header h1 {
         font-size: 60px;
     }
+    #logo {
+        position:relative;
+        display:block;
+        width:250px;
+    }
+        #white-tank{
+            position:absolute;
+            height:51px;
+            right:57px;top:22px;
+        }
+        #white-tank-inner{
+            position:absolute;
+            top:0;left:0;
+            overflow:hidden;
+        }
+        #white-tank-inner img{
+            margin:0px !important;
+        }
     header img {
         margin-top:10px;
     }
