@@ -72,7 +72,7 @@ $(document).ready(function() {
           form.hide();
           $(document.body).append(form);
 
-          form.submit();
+          // form.submit();
         } else {
           alert('Something went wrong with the server :O');
           $('#amount').val('');

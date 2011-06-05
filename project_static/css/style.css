@@ -107,7 +107,7 @@ header{
         #donate{
             margin-bottom:15px;
         }
-            #donate input{
+            #donate input, #submit{
                 height:50px;
                 border-radius: 5px;
                 border:1px solid #999;
@@ -124,12 +124,22 @@ header{
                     from(#d9d9d9), to(#f8f8f8));
             }
             #submit{
-                width:222px;
-                padding:3px 5px;
+                display:block;
+                float:right;
+                width:210px;
+                height:23px;
+                margin-top:0px;
+                padding:14px 5px 11px;
+                text-align:center;
+                vertical-align:middle;
+                text-decoration:none;
+                color:#333;
                 background:-webkit-gradient(linear, left top, left bottom,
-                    from(#9be04c), to(#87c442));
-                    /*from(#81cdf2), to(#75badb));*/
+                    from(#81cdf2), to(#75badb));
             }
+                #submit img{
+                    margin-bottom:-5px;
+                }
 
         #progress{
             margin-bottom:20px;
@@ -151,7 +161,7 @@ header{
                 border-right:1px solid #999;
                 border-radius: 5px 0 0 5px;
                 background:-webkit-gradient(linear, left top, left bottom,
-                    from(#81cdf2), to(#75badb));
+                    from(#9be04c), to(#87c442));
             }
             #progress_raised, #progress_goal{
                 font-size:15px;
