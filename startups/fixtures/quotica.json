@@ -10,8 +10,8 @@
       "goal": null, 
       "video": "", 
       "short_description": "Quotica is a way to collect and discover quotes online", 
-      "logo": "logo/quotica.png", 
-      "banner": "", 
+      "logo": "logo/quotica-logo.png", 
+      "banner": "banners/quotica_banner.png", 
       "slug": "quotica", 
       "name": "Quotica"
     }

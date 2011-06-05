@@ -10,8 +10,8 @@
       "goal": 10000, 
       "video": "", 
       "short_description": "Rocketr is the fastest way to capture and share thoughts in groups. It is your notepad, connected.", 
-      "logo": "", 
-      "banner": "", 
+      "logo": "rocketr-logo.png", 
+      "banner": "banners/rocketrbanner.png", 
       "slug": "rocketr", 
       "name": "Rocketr"
     }
