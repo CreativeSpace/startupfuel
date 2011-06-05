@@ -139,7 +139,7 @@ $(document).ready(function() {
 
 var genPaypalForm = function(email, desc, amount, ppid) {
   var hidden = {
-    business: ppid,
+    business: 'info@ideasylum.com',
     cmd: '_donations',
     item_name: desc,
     item_number: ppid,
