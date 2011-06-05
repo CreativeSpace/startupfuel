@@ -58,9 +58,23 @@ header{
 
     #hmStartups{
         margin:10px 0;
+        text-align:center;
     }
+        #hmStartups a{
+            text-decoration:none;
+            margin-bottom:10px;
+            display:block;
+            float:left;
+            padding:5px 5px 2px;
+            background-color:#fff;
+            box-shadow:0 2px 6px #777;
+        }
+        #hmStartups a.odd{
+            margin-right:10px;
+        }
 
     #hmQueue{
+        clear:left;
         margin:10px 0;
     }
         #hmQueue a{

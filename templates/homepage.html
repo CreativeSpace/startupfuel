@@ -7,8 +7,9 @@
     </div>
     <div id="hmStartups">
         {% for startup in startups %}
-        <a href="{% url project slug=startup.slug %}" class="startupBanner">
-            <img src="{{STATIC_URL}}{{startup.logo}}" alt="{{ startup }}" />
+        <a href="{% url project slug=startup.slug %}"
+                class="startupBanner {% cycle 'odd' 'event' %}">
+            <img src="{{STATIC_URL}}{{startup.banner}}" alt="{{ startup }}" />
         </a>
         {% endfor %}
     </div>
