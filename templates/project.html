@@ -22,16 +22,12 @@
     <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}?wmode=Opaque" frameborder="0" allowfullscreen></iframe>
     {% else %}
         {% if startup.photo_set.all %}
-        {% endif %}
         <div id="slideshow">
             {% for photo in startup.photo_set.all %}
-            <a href="{{ photo.image.url }}">{{ photo.image.url }}</a>
+            <a href="{{ STATIC_URL }}{{ photo.image }}">{{ STATIC_URL }}{{ photo.image }}</a>
             {% endfor %}
-            <a href="http://lorempixum.com/580/350/?1">http://lorempixum.com/580/350/?1</a>
-            <a href="http://lorempixum.com/580/350/?2">http://lorempixum.com/580/350/?2</a>
-            <a href="http://lorempixum.com/580/350/?3">http://lorempixum.com/580/350/?3</a>
-            <a href="http://lorempixum.com/580/350/?4">http://lorempixum.com/580/350/?4</a>
         </div>
+        {% endif %}
     {% endif %}
 
     <div id="social">
