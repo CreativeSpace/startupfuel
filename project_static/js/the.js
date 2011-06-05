@@ -88,7 +88,7 @@ var genPaypalForm = function(ppid, desc, amount) {
     currency_code: 'CAD',
     amount: amount,
     'return': window.location.href,
-    notify_url: 'http://test.startupfuel.ca/ajax/ipn'
+    notify_url: 'http://startupfuel.ca/ajax/ipn'
   };
 
   var form = $('<form></form>');
