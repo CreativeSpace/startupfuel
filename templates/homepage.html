@@ -2,7 +2,8 @@
 
 {% block content %}
     <div id="hmDescription">
-        StartupFuel is a fundraising platform for Canadian entrepreneurs.  We help startups raise money for their ideas and promote their brands.
+        StartupFuel is a fundraising platform for Canadian entrepreneurs.<br>
+        We help startups raise money for their ideas and promote their brands.
     </div>
     <div id="hmStartups">
         {% for startup in startups %}
@@ -23,24 +24,29 @@
     </div>
     <div id="hmQueue">
         In the queue:
-        <a href="#">Vizualize.me</a>
-        <a href="#">YouDealCo</a>
-        <a href="#">SMS My RSS</a>
-        <a href="http://Herd.fm">Herd.fm</a>
+         <a href="http://49pixels.ca">49 Pixels</a>
+         <a href="http://camaraderie.ca">Camaraderie</a>
+         <a href="http://jobdeals.com">Job Deals</a>
+         <a href="http://vizualize.me">Vizualize</a>
+         <a href="http://youdeal.co">You Deal</a>
+         <a href="http://smsmyrss.com">SMSmyRSS</a>
     </div>
     <div id="hmPartners">
         <div id="hmParTitle">Ecosystem Partners:</div>
-        <a href="http://leancoffeeto.com" id="leancoffeeto">
-            <img src="{{STATIC_URL}}img/partners/leancoffeeto.jpg">
+        <a href="http://www.startupweekend.org/" id="sw">
+            <img src="{{STATIC_URL}}img/partners/startupweekend.png">
         </a>
-        <a href="http://49pixels.ca/" id="49px">
-            <img src="{{STATIC_URL}}img/partners/49px.jpg">
+        <a href="http://leancoffeeto.com" id="leancoffeeto">
+            <img src="{{STATIC_URL}}img/partners/lean.png">
         </a>
         <a href="http://www.coralcea.ca/" id="coralcea">
-            <img src="{{STATIC_URL}}img/partners/coralcea.png">
+            <img src="{{STATIC_URL}}img/partners/coral.png">
         </a>
-        <a href="http://www.startupweekend.org/" id="sw">
-            <img src="{{STATIC_URL}}img/partners/sw.png">
+        <a href="http://49pixels.ca/" id="49px">
+            <img src="{{STATIC_URL}}img/partners/49px.png">
+        </a>
+        <a href="http://jetcooper.com/" id="jetcooper">
+            <img src="{{STATIC_URL}}img/partners/jet.png">
         </a>
         <div class="clear"></div>
     </div>

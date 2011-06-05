@@ -56,6 +56,7 @@ header{
     #hmDescription{
         font-size:24px;
         margin:15px 0;
+        text-shadow: 0pt -2pt 2px #fff;
     }
 
     #hmStartups{
@@ -99,6 +100,7 @@ header{
 
     #hmQueue{
         margin:20px 0;
+        text-shadow: 0pt -1pt 1px #fff;
     }
         #hmQueue a{
             color:#333;
@@ -118,13 +120,16 @@ header{
         #hmPartners a{
             display:block;
             float:left;
-            width:25%;
+            width:20%;
             text-decoration:none;
             text-align:center;
         }
         #hmPartners img{
             max-height:80px;
             width:auto;
+        }
+        #jetcooper{
+            padding-top:5px;
         }
 
 
