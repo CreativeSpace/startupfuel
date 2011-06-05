@@ -4,7 +4,7 @@ from django.db.models import Sum
 class Startup(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
-    short_description = models.CharField(max_length=150, blank=True)
+    short_description = models.CharField(max_length=500, blank=True)
     description = models.TextField(blank=True)
     logo = models.ImageField(upload_to='logo', null=True, blank=True)
     banner = models.ImageField(upload_to='banners', null=True, blank=True)
