@@ -78,6 +78,44 @@ $(document).ready(function() {
   //lazy-load twitter/facebook
   $('#facebook').html('<iframe src="http://www.facebook.com/plugins/like.php?app_id=206457229389922&amp;href='+escape(document.location.href)+'&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>');
   $('#twitter').append($('<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>'));
+
+  //slideshows
+  $('.slideshow').each(function() {
+    var div = $(this);
+    var first;
+    var cur;
+
+    //convert our lovely links into images
+    div.children('a').each(function() {
+      var img = $('<img>');
+      img.attr($(this).attr('href'));
+      img.hide();
+      div.append(img);
+      $(this).remove();
+
+      if (!first)
+        first = img;
+    });
+
+    //display the first image
+    cur = div.children('img[:first]');
+    cur.fadeIn();
+
+    //time rotator
+    setTimeout(function() {
+      //find the next element
+      var next = cur.next();
+      if (next.length == 0)
+        next = first;
+
+      //fade out the current one and fade in the next
+      cur.fadeOut();
+      next.fadeIn();
+
+      //update cur
+      cur = next;
+    }, 3000);
+  };
 });
 
 var genPaypalForm = function(ppid, desc, amount) {
