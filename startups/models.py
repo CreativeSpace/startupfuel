@@ -30,7 +30,7 @@ class Startup(models.Model):
 class Tier(models.Model):
     startup = models.ForeignKey(Startup)
     amount = models.IntegerField()
-    incentive = models.CharField(max_length=150)
+    incentive = models.CharField(max_length=300)
 
     def __unicode__(self):
         return str(self.amount)
@@ -41,3 +41,7 @@ class Donation(models.Model):
 
     def __str__(self):
         return str(self.amount)
+
+class Photo(models.Model):
+    startup = models.ForeignKey(Startup)
+    image = models.ImageField(upload_to='photos')

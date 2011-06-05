@@ -1,0 +1,64 @@
+[
+  {
+    "pk": 3, 
+    "model": "startups.startup", 
+    "fields": {
+      "website": "https://rocketr.com/", 
+      "description": "Rocketr is a cloud-synced, social note-taking application available across web and mobile platforms.\r\n\r\nIn the same way you would use your moleskine, or the default notepad on your phone, using Rocketr is equally as simple. Take a note, then take another. Notes don't need titles, tags, or formatting. We believe that the value of each individual note is so small, that there should be nothing between you and writing it down.\r\n\r\nTogether though - notes make up our thoughts, our ideas, and eventually - dictate our actions. This is where Rocketr shines.\r\n\r\nUsers have the option of assigning their notes (at the moment they're taken, or later) to a notebook. Each notebook, in turn, has a series of editors - people you've invited to write in that notebook with you. Every time you place a note in that notebook, your editors can see it, add comments to it, and upvote it. And you can do the same for their notes too.\r\n\r\nWhen you add a note to a notebook, you open the conversation. You give that note a chance to become an idea. Your notebooks are like a pulse for your ideas and you can have as many notebooks as you like - all of them with different editors. Notebooks can be private to you and your editors, or, if you wish to see the ideas travel, you can make your notebook public for all the world to see and follow.", 
+      "paypal_email": "", 
+      "twitter": "rocketr", 
+      "goal": 10000, 
+      "video": "", 
+      "short_description": "Rocketr is the fastest way to capture and share thoughts in groups. It is your notepad, connected.", 
+      "logo": "", 
+      "banner": "", 
+      "slug": "rocketr", 
+      "name": "Rocketr"
+    }
+  }, 
+  {
+    "pk": null, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 10, 
+      "startup": 3, 
+      "incentive": "A personally written thank you card from the (very appreciative) founders."
+    }
+  }, 
+  {
+    "pk": null, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 25, 
+      "startup": 3, 
+      "incentive": "All of the above, plus access to new features and improvements 24 hours before everyone else and a 1 Year Subscription to a Premium Rocketr Account. (10 Private Notebooks)"
+    }
+  }, 
+  {
+    "pk": null, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 100, 
+      "startup": 3, 
+      "incentive": "All of the above, plus an Unlimited Rocketr Account FOR LIFE! (Unlimited Private Notebooks) a 1 hour Business Model Generation Workshop w/ Jet Cooper"
+    }
+  }, 
+  {
+    "pk": null, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 500, 
+      "startup": 3, 
+      "incentive": "All of the above, plus 5 additional Unlimited Rocketr Accounts FOR LIFE! (For 5 friends of your choosing)"
+    }
+  }, 
+  {
+    "pk": null, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 1000, 
+      "startup": 3, 
+      "incentive": "All of the above, plus a 1 Year license to our proprietary in-house split testing software (this shit is dope!) a Monthly Review of the Rocketr Product Roadmap from the vantage point of a Key Influencer & User"
+    }
+  }
+]
