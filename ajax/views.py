@@ -32,9 +32,10 @@ def donation(request):
 class IPN(Endpoint):
     def process(self, data):
         amt = data['mc_gross']
+        ppid = data['item_number']
 
         try:
-          startup = Startup.objects.get(paypal_email='info@ideasylum.com')
+          startup = Startup.objects.get(pk=int(ppid))
         except:
           return
 
