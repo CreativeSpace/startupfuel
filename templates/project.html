@@ -16,6 +16,8 @@
         </div>
     </div>
 
+    <hr style="margin: 10px 0 10px 0;">
+
     {% if startup.video %}
     <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}?wmode=Opaque" frameborder="0" allowfullscreen></iframe>
     {% endif %}
@@ -29,6 +31,8 @@
     </div>
 
     {{ startup.description|markdown }}
+
+    <hr>
 {% endblock %}
 
 {% block sidebar %}
