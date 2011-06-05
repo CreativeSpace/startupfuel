@@ -2,8 +2,7 @@
 
 {% block content %}
     <div id="hmDescription">
-        Startup fuels does some shit blah blah blah.
-        Startup fuels does some shit blah blah blah.
+        StartupFuel is a fundraising platform for Canadian entrepreneurs. We help startups raise money and promote their products or services.
     </div>
     <div id="hmStartups">
         {% for startup in startups %}
@@ -12,6 +11,14 @@
             <img src="{{STATIC_URL}}{{startup.banner}}" alt="{{ startup }}" />
         </a>
         {% endfor %}
+        <div class="startupBanner even youhere">
+            <div id="youhere">
+                <div>
+                    <span>Your startup here</span><br>
+                    Pitch us <a href="http://twitter.com/startupfuelca/">@startupfuelca</a> on twitter.
+                </div>
+            </div>
+        </div>
         <div class="clear"></div>
     </div>
     <div id="hmQueue">
