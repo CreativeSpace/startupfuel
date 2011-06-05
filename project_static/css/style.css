@@ -1,4 +1,6 @@
-
+a, a:visited {
+    color: #ff5f57;
+}
 
 body, html{
     margin:0; padding:0;
