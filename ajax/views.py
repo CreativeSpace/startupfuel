@@ -33,7 +33,12 @@ class IPN(Endpoint):
     def process(self, data):
         amt = data['mc_gross']
 
+        try:
+          startup = Startup.objects.get(paypal_email='info@ideasylum.com')
+        except:
+          return
+
         don = Donation()
-        don.amount = float(amount)
-        don.startup = 'info@ideasylum.com'
+        don.amount = float(amt)
+        don.startup = startup
         don.save()
