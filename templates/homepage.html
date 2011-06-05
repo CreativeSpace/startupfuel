@@ -12,15 +12,37 @@
             <img src="{{STATIC_URL}}{{startup.banner}}" alt="{{ startup }}" />
         </a>
         {% endfor %}
+        <div class="startupBanner even youhere">
+            <div id="youhere">
+                <div>
+                    <span>Your startup here</span><br>
+                    Pitch us <a href="http://twitter.com/startupfuelca/">@startupfuelca</a> on twitter.
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
     <div id="hmQueue">
         In the queue:
-        <a href="#">One</a>
-        <a href="#">One</a>
-        <a href="#">One</a>
-        <a href="#">One</a>
+        <a href="#">Vizualize.me</a>
+        <a href="#">YouDealCo</a>
+        <a href="#">SMS My RSS</a>
+        <a href="http://Herd.fm">Herd.fm</a>
     </div>
     <div id="hmPartners">
-
+        <div id="hmParTitle">Ecosystem Partners:</div>
+        <a href="http://leancoffeeto.com" id="leancoffeeto">
+            <img src="{{STATIC_URL}}img/partners/leancoffeeto.jpg">
+        </a>
+        <a href="http://49pixels.ca/" id="49px">
+            <img src="{{STATIC_URL}}img/partners/49px.jpg">
+        </a>
+        <a href="http://www.coralcea.ca/" id="coralcea">
+            <img src="{{STATIC_URL}}img/partners/coralcea.png">
+        </a>
+        <a href="http://www.startupweekend.org/" id="sw">
+            <img src="{{STATIC_URL}}img/partners/sw.png">
+        </a>
+        <div class="clear"></div>
     </div>
 {% endblock %}

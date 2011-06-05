@@ -62,7 +62,7 @@ header{
         margin:10px 0;
         text-align:center;
     }
-        #hmStartups a{
+        #hmStartups .startupBanner{
             text-decoration:none;
             margin-bottom:10px;
             display:block;
@@ -71,16 +71,60 @@ header{
             background-color:#fff;
             box-shadow:0 2px 6px #777;
         }
-        #hmStartups a.odd{
+        #hmStartups .startupBanner.odd{
             margin-right:10px;
         }
+        #hmStartups .startupBanner.youhere{
+            padding-bottom:5px;
+            color:#333;
+        }
+        #youhere{
+            position:relative;
+            border:2px dashed #999;
+            height:198px;
+            width:460px;
+        }
+            #youhere span{
+                font-size:22px;
+                font-weight:bold;
+            }
+            #youhere div{
+                position:absolute;
+                left:50%;top:50%;
+                height:50px;width:400px;
+                margin-top:-25px;
+                margin-left:-200px;
+                text-align:center;
+            }
 
     #hmQueue{
-        clear:left;
-        margin:10px 0;
+        margin:20px 0;
     }
         #hmQueue a{
             color:#333;
+        }
+
+    #hmPartners{
+        position:relative;
+        background-color:#fff;
+        box-shadow:0 2px 6px #777;
+        padding:30px 5px 2px;
+    }
+        #hmParTitle{
+            font-weight:bold;
+            position:absolute;
+            top:5px;left:5px;
+        }
+        #hmPartners a{
+            display:block;
+            float:left;
+            width:25%;
+            text-decoration:none;
+            text-align:center;
+        }
+        #hmPartners img{
+            max-height:80px;
+            width:auto;
         }
 
 
@@ -130,6 +174,11 @@ header{
         #main p{
             line-height:1.4;
             margin-bottom:10px;
+        }
+        #slideshow {
+            height: 350px;
+            padding-bottom: 5px;
+            width: 580px;
         }
     #sidebar{
         position:relative;

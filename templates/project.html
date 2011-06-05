@@ -20,6 +20,14 @@
 
     {% if startup.video %}
     <iframe id="video" width="580" height="349" src="http://www.youtube.com/embed/{{ startup.video }}?wmode=Opaque" frameborder="0" allowfullscreen></iframe>
+    {% else %}
+        {% if startup.photo_set.all %}
+        <div id="slideshow">
+            {% for photo in startup.photo_set.all %}
+            <a href="{{ STATIC_URL }}{{ photo.image }}">{{ STATIC_URL }}{{ photo.image }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
     {% endif %}
 
     <div id="social">
