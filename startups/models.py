@@ -18,7 +18,7 @@ class Startup(models.Model):
         return self.name
 
     def amount_raised(self):
-        return Donation.objects.filter(startup=self).aggregate(amount_raised=Sum('amount'))['amount_raised']
+        return Donation.objects.filter(startup=self).aggregate(amount_raised=Sum('amount'))['amount_raised'] or 0
 
     def amount_raised_percent(self):
         amount_raised = self.amount_raised()
