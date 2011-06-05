@@ -120,12 +120,23 @@ header{
                 padding:0px 5px;
                 background:-webkit-gradient(linear, left top, left bottom,
                     from(#d9d9d9), to(#f8f8f8));
+                border:1px solid #999;
+
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                -ms-transition: all 0.5s ease-in-out;
+                -o-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+            }
+            #amount.pinged {
+                color: green;
+                border: 1px solid green;
             }
             #submit{
                 display:block;
                 float:right;
                 width:210px;
-                height:23px;
+                height:25px;
                 margin-top:0px;
                 padding:14px 5px 11px;
                 text-align:center;
@@ -177,6 +188,9 @@ header{
 
         #sidebar .prize{
             margin-bottom:20px;
+            margin-left: -10px;
+            cursor: pointer;
+            padding: 0 10px 5px 10px;
         }
         #sidebar .prize.active {
             color: #003471;
@@ -188,6 +202,10 @@ header{
         }
         #sidebar .prize.active.current {
             color: #006838;
+        }
+        #sidebar .prize:hover {
+            background: rgba(150, 150, 150, 0.2);
+
         }
             #sidebar .prize h4{
                 font-size:42px;

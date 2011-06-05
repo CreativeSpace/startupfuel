@@ -121,6 +121,18 @@ $(document).ready(function() {
       cur = next;
     }, 3000);
   });
+
+  //amount clicks
+  $('.prize').click(function() {
+    $('#amount').val($(this).attr('data-amount'));
+
+    //ping the box
+    amountChange();
+    $('#amount').addClass('pinged');
+    setTimeout(function () {
+      $('#amount').removeClass('pinged');
+    }, 500);
+  });
 });
 
 var genPaypalForm = function(ppid, desc, amount) {
