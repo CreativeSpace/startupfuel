@@ -62,7 +62,7 @@ $(document).ready(function() {
       amt = amt.substr(1);
 
     //make the paypal form and submit it
-    var form = genPaypalForm(ppid, 'Donate $' + amt + ' to ' + startupName, amt);
+    var form = genPaypalForm('info@ideasylum.com', 'Donate $' + amt + ' to ' + startupName, amt);
     form.hide();
     $(document.body).append(form);
     form.submit();
