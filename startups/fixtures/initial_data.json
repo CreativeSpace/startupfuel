@@ -1,0 +1,353 @@
+[
+  {
+    "pk": 1, 
+    "model": "startups.startup", 
+    "fields": {
+      "website": "http://hipsell.com/", 
+      "description": "### What is Hipsell?\r\n\r\nHipsell is a mobile and web app that offers a completely new and streamlined selling experience.  We let you sell things right from your phone in one simple step, and leverage cutting-edge technology to help you get your stuff sold as fast and painlessly as possible.  Seriously.  We're so confident in what we're building that we'll guarantee that you won't find a better way to sell things anywhere.\r\n\r\n### What are We Doing Now?\r\n\r\nWe're currently hard at work building out our core systems and nearing private beta.\r\n\r\n### Why Do We Need Money?\r\n\r\nWell, we're working our collective asses off to secure some funding, but we're almost certainly not going to close by the end of June.  Unfortunately, we need to pay rent, and eat, and maybe buy a phone or two so that we can do better testing.\r\n\r\nIf we can raise 5k, we'll be able to go full blast on Hipsell for the month of June, continue to nail our milestones, and be fully on track for a public beta in month of July.\r\n\r\nYour support would be awesome, and we'll put any and all money we raise towards making Hipsell the best application you can get for your phone (or web browser).\r\n", 
+      "screenshot": "", 
+      "paypal_email": "info@ideasylum.com", 
+      "twitter": "hipsellapp", 
+      "goal": 5000, 
+      "video": "C3Yxp5hPB40", 
+      "short_description": "\u2605Hipsell lets you sell stuff fast and painlessly right from you phone.  Your item is posted on both Hipsell *and* Craiglist, and we manage offers and questions for you.  Hipsell makes it fun to sell things.", 
+      "logo": "img/logos/hipsell.png", 
+      "banner": "banners/hipsell-supfuel-banner.png", 
+      "slug": "hipsell", 
+      "name": "Hipsell"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "startups.startup", 
+    "fields": {
+      "website": "http://quoti.ca/", 
+      "description": "Do you ever find yourself trying to remember a great quote that fits a particular conversation you\u2019re having or blog post you\u2019re writing, but you just can\u2019t seem to recall the wording?\r\n\r\nQuotica allows you to add and tag quotes, save quotes other users have added to your favorites, follow other users, and share quotes on Facebook/Twitter. The special sauce? You can customize every quote you add with a choice of 9 background designs.\r\n\r\n<h3>What are we doing now?</h3>\r\n\r\nTalking to users, refining design, understanding customer needs, engaging with press contacts.\r\n\r\n<h3>Why do we need the funding?</h3>\r\n\r\nRight now we're in private beta, and building additional social features for the web version. To expand our reach, we're actively seeking mobile developers to build a Quotica app. But, we need your support!\r\n\r\n$5,000 will help us release a mobile app, exit private beta, and make same waves on Facebook/Twitter via contests for all of our awesome fans!", 
+      "screenshot": "screenshots/quotica-screenshot.png", 
+      "paypal_email": "", 
+      "twitter": "quotica", 
+      "goal": 5000, 
+      "video": "", 
+      "short_description": "Quotica is a way to collect and discover quotes online", 
+      "logo": "logo/quotica-logo.png", 
+      "banner": "banners/quotica_banner.png", 
+      "slug": "quotica", 
+      "name": "Quotica"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "startups.startup", 
+    "fields": {
+      "website": "https://rocketr.com/", 
+      "description": "<h3>At The Highest Level</h3>\r\n\r\nRocketr is a cloud-synced, social note-taking application available across web and mobile platforms.\r\n\r\n<h3>What's Rocketr For?</h3>\r\n\r\nIn the same way you would use your moleskine, or the default notepad on your phone, using Rocketr is equally as simple. Take a note, then take another. Notes don't need titles, tags, or formatting. We believe that the value of each individual note is so small, that there should be nothing between you and writing it down.\r\n\r\nTogether though - notes make up our thoughts, our ideas, and eventually - dictate our actions. This is where Rocketr shines.\r\n\r\nUsers have the option of assigning their notes (at the moment they're taken, or later) to a notebook. Each notebook, in turn, has a series of editors - people you've invited to write in that notebook with you. Every time you place a note in that notebook, your editors can see it, add comments to it, and upvote it. And you can do the same for their notes too.\r\n\r\nWhen you add a note to a notebook, you open the conversation. You give that note a chance to become an idea. Your notebooks are like a pulse for your ideas and you can have as many notebooks as you like - all of them with different editors. Notebooks can be private to you and your editors, or, if you wish to see the ideas travel, you can make your notebook public for all the world to see and follow.\r\n\r\n<h3>What's The Money For? </h3>\r\n\r\nWe want to build a super dope Chrome extension. It's going to be the best bookmarking plug-in since Delicious (we suspect). We also need to keep our operations rolling day-to-day. We're a team of 5 people and any remaining funds beyond the Chrome extension will go towards getting Zach (our Data Architect) a new pair of shoes. If you saw what he's wearing, you'd understand. Also, Jen (our CTO) hasn't eaten since Thursday. Evan (our Designer) has to maintain his hipster image... and well, I promised the StartupFuel team we'd drink some beer together.", 
+      "screenshot": "", 
+      "paypal_email": "", 
+      "twitter": "rocketr", 
+      "goal": 10000, 
+      "video": "ovIaiFPEmAI", 
+      "short_description": "Rocketr is the fastest way to capture and share thoughts in groups. It is your notepad, connected.", 
+      "logo": "logo/rocketr-logo.png", 
+      "banner": "banners/rocketrbanner.png", 
+      "slug": "rocketr", 
+      "name": "Rocketr"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 5, 
+      "startup": 1, 
+      "incentive": "Get early beta access."
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 10, 
+      "startup": 1, 
+      "incentive": "Get early beta access and a sticker."
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 25, 
+      "startup": 1, 
+      "incentive": "Get early beta access, a sticker and a Hipsell logo tee."
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 50, 
+      "startup": 1, 
+      "incentive": "Get early beta access, a sticker, Hipsell logo tee and work out off Hipsell office for a day."
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 100, 
+      "startup": 1, 
+      "incentive": "Get early beta access, a sticker, Hipsell logo tee, work out off Hipsell office for a day and a Hipsell logo baseball cap."
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 500, 
+      "startup": 1, 
+      "incentive": "All of the above, lunch with the Founders and a round of drinks at our launch party."
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 5, 
+      "startup": 2, 
+      "incentive": "Get early Beta access."
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 10, 
+      "startup": 2, 
+      "incentive": "All of the above plus a Quotica sticker."
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 25, 
+      "startup": 2, 
+      "incentive": "All of the above plus a Quotica logo tee with your favourite quote on the back."
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 50, 
+      "startup": 2, 
+      "incentive": "All of the above plus a custom print-out of your top 10 favorite quotes."
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 100, 
+      "startup": 2, 
+      "incentive": "All of the above plus a Quotica logo baseball cap."
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 500, 
+      "startup": 2, 
+      "incentive": "All of the above, lunch with the founders and a round of drinks."
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 10, 
+      "startup": 3, 
+      "incentive": "A personally written thank you card from the (very appreciative) founders."
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 25, 
+      "startup": 3, 
+      "incentive": "All of the above, plus access to new features and improvements 24 hours before everyone else and a 1 Year Subscription to a Premium Rocketr Account. (10 Private Notebooks)"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 100, 
+      "startup": 3, 
+      "incentive": "All of the above, plus an Unlimited Rocketr Account FOR LIFE! (Unlimited Private Notebooks) a 1 hour Business Model Generation Workshop w/ Jet Cooper. Also, a t-shirt!"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 500, 
+      "startup": 3, 
+      "incentive": "All of the above, plus 5 additional Unlimited Rocketr Accounts FOR LIFE! (For 5 friends of your choosing)"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "startups.tier", 
+    "fields": {
+      "amount": 1000, 
+      "startup": 3, 
+      "incentive": "All of the above, plus a 1 Year license to our proprietary in-house split testing software (this shit is dope!) a Monthly Review of the Rocketr Product Roadmap from the vantage point of a Key Influencer & User"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 10.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 25.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 10.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 20.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 5.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 25.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 5.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 20.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 10.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 5.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 5.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 30.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 25.0, 
+      "startup": 1
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 10.0, 
+      "startup": 3
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 100.0, 
+      "startup": 3
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 10.0, 
+      "startup": 3
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 25.0, 
+      "startup": 2
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "startups.donation", 
+    "fields": {
+      "amount": 25.0, 
+      "startup": 3
+    }
+  }
+]
