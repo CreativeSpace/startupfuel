@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 
 from fundfounders.startups.models import Donation, Startup
+from paypal import Endpoint
 
 def donation(request):
   #prep basic response stuff
@@ -27,3 +28,12 @@ def donation(request):
 
   res.write('{"success": true}')
   return res
+
+class IPN(Endpoint):
+    def process(self, data):
+        amt = data['mc_gross']
+
+        don = Donation()
+        don.amount = float(amount)
+        don.startup = 'info@ideasylum.com'
+        don.save()
