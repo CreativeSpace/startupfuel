@@ -134,6 +134,9 @@ $(document).ready(function() {
     setTimeout(function () {
       $('#amount').removeClass('pinged');
     }, 500);
+
+    //scroll to top
+    $('window, body').animate({scrollTop: 0}, 300, 'swing');
   });
 });
 
