@@ -41,3 +41,7 @@ class Donation(models.Model):
 
     def __str__(self):
         return str(self.amount)
+
+class Photo(models.Model):
+    startup = models.ForeignKey(Startup)
+    image = models.ImageField(upload_to='photos')
