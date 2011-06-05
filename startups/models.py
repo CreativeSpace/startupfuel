@@ -13,6 +13,7 @@ class Startup(models.Model):
     video = models.CharField(max_length=50, blank=True)
     paypal_email = models.EmailField(blank=True)
     goal = models.IntegerField(null=True, blank=True)
+    screenshot = models.ImageField(upload_to='screenshots', null=True, blank=True)
 
     def __unicode__(self):
         return self.name
