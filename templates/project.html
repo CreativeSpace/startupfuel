@@ -27,6 +27,10 @@
             <a href="{{ STATIC_URL }}{{ photo.image }}">{{ STATIC_URL }}{{ photo.image }}</a>
             {% endfor %}
         </div>
+        {% else %}
+            {% if startup.screenshot %}
+            <img src="{{ STATIC_URL }}{{ startup.screenshot }}" alt="{{ startup }} screenshot" />
+            {% endif %}
         {% endif %}
     {% endif %}
 
