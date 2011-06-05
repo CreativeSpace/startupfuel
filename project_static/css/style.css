@@ -129,6 +129,11 @@ header{
             line-height:1.4;
             margin-bottom:10px;
         }
+        #slideshow {
+            height: 350px;
+            padding-bottom: 5px;
+            width: 580px;
+        }
     #sidebar{
         position:relative;
         margin-top:0px;
