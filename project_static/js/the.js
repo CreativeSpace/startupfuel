@@ -32,7 +32,6 @@ $(document).ready(function() {
 
       //if the amount is higher, abort
       if (n > amt) {
-        if (last) last.addClass('current');
         return;
       }
 
@@ -40,6 +39,9 @@ $(document).ready(function() {
 
       last = $(this);
     });
+
+    //set the current prize
+    last.addClass('current');
   };
   $('#amount').keyup(amountChange)
               .change(amountChange);
@@ -120,6 +122,18 @@ $(document).ready(function() {
       //update cur
       cur = next;
     }, 3000);
+  });
+
+  //amount clicks
+  $('.prize').click(function() {
+    $('#amount').val($(this).attr('data-amount'));
+
+    //ping the box
+    amountChange();
+    $('#amount').addClass('pinged');
+    setTimeout(function () {
+      $('#amount').removeClass('pinged');
+    }, 500);
   });
 });
 

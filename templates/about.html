@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load markup %}
+
+{% block main %}
+
+    <h2>What is Startup Fuel?</h2>
+    <p>That's a good question.  I'll get back to you on that.  In
+    the meantime, here's some lorem ipsum to sooth your soul.</p>
+
+    <h3>Lorem Ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <hr>
+{% endblock %}
+
+{% block sidebar %}
+
+    <!-- le twit -->
+    <div style="text-shadow: none; margin-top: -10px;">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 10,
+          interval: 6000,
+          width: 'auto',
+          height: 500,
+          theme: {
+            shell: {
+              background: '#444444',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#ffffff',
+              color: '#444444',
+              links: '#607890'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: true,
+            hashtags: true,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+          }
+        }).render().setUser('startupfuelca').start();
+        </script>
+
+    </div>
+
+{% endblock %}
