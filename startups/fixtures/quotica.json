@@ -15,59 +15,5 @@
       "slug": "quotica", 
       "name": "Quotica"
     }
-  }, 
-  {
-    "pk": null, 
-    "model": "startups.tier", 
-    "fields": {
-      "amount": 5, 
-      "startup": 2, 
-      "incentive": "Get early Beta access."
-    }
-  }, 
-  {
-    "pk": null, 
-    "model": "startups.tier", 
-    "fields": {
-      "amount": 10, 
-      "startup": 2, 
-      "incentive": "All of the above plus a Quotica sticker."
-    }
-  }, 
-  {
-    "pk": null, 
-    "model": "startups.tier", 
-    "fields": {
-      "amount": 25, 
-      "startup": 2, 
-      "incentive": "All of the above plus a Quotica logo tee."
-    }
-  }, 
-  {
-    "pk": null, 
-    "model": "startups.tier", 
-    "fields": {
-      "amount": 50, 
-      "startup": 2, 
-      "incentive": "All of the above plus a custom print-out of your top 10 favorite quotes."
-    }
-  }, 
-  {
-    "pk": null, 
-    "model": "startups.tier", 
-    "fields": {
-      "amount": 100, 
-      "startup": 2, 
-      "incentive": "All of the above plus a Quotica logo baseball cap."
-    }
-  }, 
-  {
-    "pk": null, 
-    "model": "startups.tier", 
-    "fields": {
-      "amount": 500, 
-      "startup": 2, 
-      "incentive": "All of the above, lunch with the founders and a round of drinks."
-    }
   }
 ]
