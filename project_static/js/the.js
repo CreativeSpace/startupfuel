@@ -80,17 +80,22 @@ $(document).ready(function() {
   $('#twitter').append($('<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>'));
 
   //slideshows
-  $('.slideshow').each(function() {
+  $('#slideshow').each(function() {
     var div = $(this);
     var first;
     var cur;
 
+    //ensure div is relatively positioned
+    if (div.css('position') == 'static')
+      div.css('position', 'relative');
+
     //convert our lovely links into images
     div.children('a').each(function() {
       var img = $('<img>');
-      img.attr($(this).attr('href'));
-      img.hide();
+      img.attr('src', $(this).attr('href'));
+      img.css('position', 'absolute');
       div.append(img);
+      img.hide();
       $(this).remove();
 
       if (!first)
@@ -98,24 +103,24 @@ $(document).ready(function() {
     });
 
     //display the first image
-    cur = div.children('img[:first]');
+    cur = div.children('img').first();
     cur.fadeIn();
 
     //time rotator
-    setTimeout(function() {
+    setInterval(function() {
       //find the next element
       var next = cur.next();
       if (next.length == 0)
         next = first;
 
       //fade out the current one and fade in the next
-      cur.fadeOut();
-      next.fadeIn();
+      cur.fadeOut(1000);
+      next.fadeIn(1000);
 
       //update cur
       cur = next;
     }, 3000);
-  };
+  });
 });
 
 var genPaypalForm = function(ppid, desc, amount) {
