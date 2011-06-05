@@ -63,6 +63,16 @@ header{
         left:250px;
         font-size:18px;
     }
+    #nav{
+        position:absolute;
+        top:5px;right:10px;
+    }
+        #nav a{
+            color:#fff;
+            font-size:12px;
+            text-decoration:none;
+            margin-right:5px;
+        }
 
 
 #body{
