@@ -16,7 +16,7 @@ em {
 body, html{
     margin:0; padding:0;
     font-size: 16px;
-    font-family:'lucida sans', 'Open Sans', arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Open Sans', arial, sans-serif;
     background-image:url(../img/bg.jpg);
     color:#333;
 }
@@ -87,7 +87,7 @@ header{
     #pitch-us {
         position: absolute;
         top: 28px;
-        left: 805px;
+        left: 799px;
     }
         #pitch-us a {
             color: #82ccf6;
