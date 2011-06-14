@@ -71,7 +71,7 @@
     {% for tier in startup.tier_set.all %}
     <div class="prize" data-amount="{{ tier.amount }}">
         <h4>${{ tier.amount }}{% if forloop.last %} or more{% endif %}</h4>
-        {{ tier.incentive }}
+        {{ tier.incentive|markdown }}
     </div>
     {% endfor %}
 {% endblock %}
