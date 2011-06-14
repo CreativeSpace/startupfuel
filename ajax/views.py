@@ -51,6 +51,7 @@ class IPN(Endpoint):
         don = Donation()
         don.amount = float(amt)
         don.startup = startup
+        don.payer_email = payer_email
         don.save()
 
 
@@ -61,9 +62,9 @@ class IPN(Endpoint):
 %(name)s.  They should be in touch with you soon regarding getting you your
 reward (assuming your donation qualified for one).
 
-    Thanks for supporting Canadian startups!
+Thanks for supporting Canadian startups!
 
-    -- StartupFuel''', 'StartupFuel <noreply@startupfuel.ca>' % {'amt': amt, 'name': startup.name},
+    -- StartupFuel''' % {'amt': amt, 'name': startup.name}, 'StartupFuel <noreply@startupfuel.ca>',
                 [payer_email], fail_silently=True)
         #if something weird happened just ignore it
         except:

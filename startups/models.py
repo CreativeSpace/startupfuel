@@ -41,6 +41,7 @@ class Tier(models.Model):
 class Donation(models.Model):
     startup = models.ForeignKey(Startup)
     amount = models.FloatField()
+    payer_email = models.EmailField(blank=True)
 
     def __str__(self):
         return str(self.amount)
