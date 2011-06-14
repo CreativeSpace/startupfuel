@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 urlpatterns += patterns('fundfounders.startups.views',
     url(r'^$', 'homepage', name='homepage'),
     url(r'^about/$', 'about', name='about'),
+    url(r'^pitch/$', 'pitch', name='pitch'),
     url(r'^(?P<slug>[\w-]+)/$', 'project', name='project'),
     (r'^ajax/', include('fundfounders.ajax.urls')),
 )

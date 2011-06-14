@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load markup %}
+
+{% block main %}
+
+  <h2>Pitch Us Your Startup!</h2>
+  <p>StartupFuel was built and launched in 54 hours at Startup Weekend Toronto in 2011.  We're still figuring things out, but if you'd like to promote your
+  startup on StartupFuel, please send us your pitch information.  We promote
+  a maximum of 4 startups at any given time, so if all the slots are taken
+  you'll be added to our queue.</p>
+
+  <p>Please be patient with us as this is not our full time job, but rather a
+  project we'd like to keep alive for the Canadian startup community.  If you're
+  a Django/Python developer and would like to work on this project, please
+  message us <a href="http://twitter.com/startupfuelca">@startupfuelca</a> or DM
+  us on Twitter.  Thank you very much and good luck.</p>
+
+  <h3>Pitch Details</h3>
+  <p>Follow the instructions below as closely as possible; if we don't
+  receive your pitch to spec there's a very good chance your page won't be
+  posted.</p>
+  <ul>
+    <li>460 x 200 banner <em>(featured banner for landing page)</em></li>
+    <li>580 x 150 logo <em>(max logo area for pitch page - will be on white back)</em></li>
+    <li>One liner / 30 second elevator pitch text <em>(max 300 characters)</em></li>
+    <li>Twitter link/handle, Facebook link, and domain</li>
+    <li>YouTube video link <em>(recommended)</em> or 580 x 350 image <em>(if no video)</em></li>
+    <li>Incentives <em>(minimum 5 e.g., $10 - A XYZ logo tee...)</em></li>
+    <li>Goal amount <em>(e.g., $10k)</em></li>
+    <li>PayPal info <em>(username, email)</em></li>
+    <li>Contact name and phone number</li>
+    <li>Business name and address</li>
+  </ul>
+  <p style="margin-top: 10px;"><strong>Note:</strong> All sizes are in pixels.</p>
+
+  <h3>Email your pitch to <a href="mailto:pitch@startupfuel.ca">pitch@startupfuel.ca</a></h3>
+  <p style="margin-top: 20px;">Be sure to follow us on Twitter <a href="http://twitter.com/startupfuelca">@startupfuelca</a> as we're likely to @ you when you're live.</p>
+
+{% endblock %}
+
+{% block sidebar %}
+
+    <!-- le twit -->
+    <div style="text-shadow: none; margin-top: -10px;">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 10,
+          interval: 6000,
+          width: 'auto',
+          height: 500,
+          theme: {
+            shell: {
+              background: '#444444',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#ffffff',
+              color: '#444444',
+              links: '#ff5f57'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: true,
+            hashtags: true,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+          }
+        }).render().setUser('startupfuelca').start();
+        </script>
+
+    </div>
+
+{% endblock %}
