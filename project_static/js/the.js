@@ -5,6 +5,7 @@ $(document).ready(function() {
 
   //grab the ppi
   var ppid = $('#ppid').val();
+  var ppemail = $('#ppemail').val();
   //grab the startup name
   var startupName = $('#startup-name').val();
 
@@ -64,7 +65,7 @@ $(document).ready(function() {
       amt = amt.substr(1);
 
     //make the paypal form and submit it
-    var form = genPaypalForm('info@ideasylum.com', 'Donate $' + amt + ' to ' + startupName, amt, ppid);
+    var form = genPaypalForm(ppemail, 'Donate $' + amt + ' to ' + startupName, amt, ppid);
     form.hide();
     $(document.body).append(form);
     form.submit();
@@ -142,7 +143,7 @@ $(document).ready(function() {
 
 var genPaypalForm = function(email, desc, amount, ppid) {
   var hidden = {
-    business: 'info@ideasylum.com',
+    business: email,
     cmd: '_donations',
     item_name: desc,
     item_number: ppid,

@@ -149,3 +149,10 @@ LOGGING = {
         },
     }
 }
+
+# Mailgun email settings
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@startupfuel.mailgun.org'
+EMAIL_HOST_PASSWORD = '1h1neb@0zeu5'
+EMAIL_PORT = 587
+
