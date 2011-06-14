@@ -5,7 +5,7 @@
 {% block main %}
 
     <h2>What is StartupFuel?</h2>
-    <p>StartupFuel is a fundraiding platform for Canadian entrepreneurs.
+    <p>StartupFuel is a fundraising platform for Canadian entrepreneurs.
     We help startups raise money for their ideas and promote their brands.</p>
 
     <h3>How Does it Work</h3>
@@ -25,8 +25,7 @@
       <a href="http://twitter.com/lylepstein">@lylepstein</a>
     </p>
 
-    <h3>This Weekend, We've Raised...</h3>
-    <h4>${{ total_raised }}</h4>
+    <h3>Total amount raised: ${{ total_raised|floatformat:2 }}</h3>
     <hr>
 {% endblock %}
 

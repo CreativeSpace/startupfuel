@@ -4,7 +4,7 @@ from fundfounders.startups.models import Startup
 from utils import get_percent_done, total_raised
 
 def homepage(request):
-    startups = Startup.objects.all()
+    startups = Startup.objects.filter(homepage=True)
     return render(request, 'homepage.html', {
         'startups': startups,
         'total_don': get_percent_done(),

@@ -15,6 +15,8 @@ class Startup(models.Model):
     goal = models.IntegerField(null=True, blank=True)
     screenshot = models.ImageField(upload_to='screenshots', null=True, blank=True)
 
+    homepage = models.BooleanField(blank=True)
+
     def __unicode__(self):
         return self.name
 
