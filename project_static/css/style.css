@@ -1,6 +1,9 @@
 a, a:visited {
     color: #ff5f57;
 }
+a:hover {
+    color: #036;
+}
 
 body, html{
     margin:0; padding:0;
@@ -323,6 +326,11 @@ header{
             margin-left: -10px;
             cursor: pointer;
             padding: 0 10px 5px 10px;
+        }
+
+        #sidebar .prize a{
+            z-index:2;
+            text-shadow: 0pt -1pt 1px #fff;
         }
         #sidebar .prize.active {
             color: #003471;
